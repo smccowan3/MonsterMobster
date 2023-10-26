@@ -29,11 +29,11 @@ public class PlacementSystem : MonoBehaviour
         if(mouseHoveringObject != null)
         {
            
-            Vector3 newPosition = mouseHoveringObject.transform.parent.position;
+            Vector3 newPosition = mouseHoveringObject.transform.position;
 
             //right now 1.25 is for 3 grid pixels
-            float xScaleF = mouseHoveringObject.GetComponent<ClickableObject>().gridSize.x / 3 * 1.25f;
-            float zScaleF = mouseHoveringObject.GetComponent<ClickableObject>().gridSize.z / 3 * 1.25f;
+            float xScaleF = mouseHoveringObject.GetComponentInChildren<ClickableObject>().gridSize.x / 3 * 1.25f;
+            float zScaleF = mouseHoveringObject.GetComponentInChildren<ClickableObject>().gridSize.z / 3 * 1.25f;
 
             Vector3 newScale = new Vector3(xScaleF, zScaleF, 1);
             cellIndicator.transform.localScale = newScale;

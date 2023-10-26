@@ -12,11 +12,18 @@ public class Building : MonoBehaviour
     public GameObject costUI;
     bool currentlySpawning;
     GameObject trainUI;
-
+    GameObject nameUI;
+    [SerializeField] string objectName;
     // Start is called before the first frame update
     void Start()
     {
+        mainUI.transform.parent = GameObject.Find("MainUI").transform;
+        Vector3 newLocation = GameObject.Find("MainUI/MiddleLocation").GetComponent<RectTransform>().position;
+        mainUI.GetComponent<RectTransform>().position = newLocation;
+        mainUI.GetComponent<RectTransform>().rotation = new Quaternion(0, 0, 0, 0);
         trainUI = mainUI.transform.Find("TrainUI").gameObject;
+        nameUI = mainUI.transform.Find("NameText").gameObject;
+        nameUI.GetComponent<Text>().text = objectName;
         trainUI.GetComponent<Image>().color = Color.red; //idle color
         trainUI.transform.Find("Text").gameObject.SetActive(false);
         costUI = mainUI.transform.Find("Cost").gameObject;

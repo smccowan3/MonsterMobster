@@ -8,6 +8,7 @@ public class ClickableObjectManager : MonoBehaviour
     public GameObject currentlyDraggingObject;
     public float liftHeight;
     public float moveSpeed = 5f;
+    public float smoothness = 0.5f;
     public GameObject mouseHoveringObject;
     public GridManager gridManager;
     public Grid grid;
@@ -45,7 +46,7 @@ public class ClickableObjectManager : MonoBehaviour
             Vector3 newPosition = grid.CellToWorld(gridPosition);
             newPosition.y = 0.1f;
             // Move the object towards the mouse position
-            currentlyDraggingObject.transform.parent.position = newPosition;
+            currentlyDraggingObject.transform.position = Vector3.Lerp(currentlyDraggingObject.transform.position, newPosition, moveSpeed*smoothness*Time.deltaTime);
 
             if (Input.GetMouseButtonDown(0))
             {
@@ -54,7 +55,7 @@ public class ClickableObjectManager : MonoBehaviour
             }
             if(Input.GetKeyDown(KeyCode.R))
             {
-                currentlyDraggingObject.transform.parent.Rotate(0, 90, 0);
+                currentlyDraggingObject.transform.Rotate(0, 90, 0);
             }
 
         }
@@ -88,11 +89,12 @@ public class ClickableObjectManager : MonoBehaviour
 
     public void moveDragObject(GameObject newObject)
     {
-     
-        if(currentlyDraggingObject == null)
+        currentlyDraggingObject = newObject;
+
+        /*if (currentlyDraggingObject == null)
         {
-            currentlyDraggingObject = newObject;
-        }
+            
+        }*/
     }
 
 

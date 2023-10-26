@@ -26,7 +26,8 @@ public class ClickableObject : MonoBehaviour
     {
         if (UI != null)
         {
-            UI.SetActive(true);
+            //UI.SetActive(true);
+            GameObject.Find("MainUI").GetComponent<UIManager>().reprioritise(UI);
         }
         //then implement some glowing effect
     }
@@ -34,18 +35,19 @@ public class ClickableObject : MonoBehaviour
     {
         if (UI != null)
         {
-            UI.SetActive(false);
+            //UI.SetActive(false);
+            GameObject.Find("MainUI").GetComponent<UIManager>().closeThis();
         }
     }
 
     public void moveDrag()
     {
-        manager.GetComponent<ClickableObjectManager>().moveDragObject(gameObject);
+        manager.GetComponent<ClickableObjectManager>().moveDragObject(transform.parent.gameObject);
     }
 
     private void OnMouseOver()
     {
-        manager.GetComponent<ClickableObjectManager>().setMouseHovering(gameObject);
+        manager.GetComponent<ClickableObjectManager>().setMouseHovering(transform.parent.gameObject);
     }
     private void OnMouseExit()
     {

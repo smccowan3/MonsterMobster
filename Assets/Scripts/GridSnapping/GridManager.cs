@@ -14,7 +14,7 @@ public class GridManager : MonoBehaviour
         mousePos.z = sceneCamera.nearClipPlane;
         Ray ray = sceneCamera.ScreenPointToRay(mousePos);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 100, placementLayerMask))
+        if (Physics.Raycast(ray, out hit, 1000, placementLayerMask))
         {
             lastPosition = hit.point;
         }
