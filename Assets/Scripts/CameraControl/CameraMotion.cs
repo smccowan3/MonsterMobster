@@ -30,12 +30,14 @@ public class CameraMotion : MonoBehaviour
     private void Move()
     {
         Vector3 nextTargetPosition = _targetPosition + _input * _speed;
+        //print(IsInBounds(nextTargetPosition));
         if (IsInBounds(nextTargetPosition)) _targetPosition = nextTargetPosition;
         transform.position = Vector3.Lerp(transform.position, _targetPosition, Time.deltaTime * _smoothing);
     }
 
     private bool IsInBounds(Vector3 position)
     {
+        
         return position.x > -_range.x &&
                position.x < _range.x &&
                position.z > -_range.y &&

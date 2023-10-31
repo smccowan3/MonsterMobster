@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Building : MonoBehaviour
 {
@@ -17,13 +18,13 @@ public class Building : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mainUI.transform.parent = GameObject.Find("MainUI").transform;
+        mainUI.transform.SetParent(GameObject.Find("MainUI").transform, false);
         Vector3 newLocation = GameObject.Find("MainUI/MiddleLocation").GetComponent<RectTransform>().position;
         mainUI.GetComponent<RectTransform>().position = newLocation;
         mainUI.GetComponent<RectTransform>().rotation = new Quaternion(0, 0, 0, 0);
         trainUI = mainUI.transform.Find("TrainUI").gameObject;
         nameUI = mainUI.transform.Find("NameText").gameObject;
-        nameUI.GetComponent<Text>().text = objectName;
+        nameUI.GetComponent<TextMeshProUGUI>().text = objectName;
         trainUI.GetComponent<Image>().color = Color.red; //idle color
         trainUI.transform.Find("Text").gameObject.SetActive(false);
         costUI = mainUI.transform.Find("Cost").gameObject;
@@ -61,7 +62,7 @@ public class Building : MonoBehaviour
     IEnumerator BeginCountdown(GameObject spawnObject, int index)
     {
         float countUp = spawnObject.GetComponent<SpawnableObject>().trainTime;
-        trainUI.transform.Find("Text").GetComponent<Text>().text = countUp.ToString();
+        trainUI.transform.Find("Text").GetComponent<TextMeshProUGUI>().text = countUp.ToString();
         trainUI.transform.Find("Text").gameObject.SetActive(true); 
         trainUI.GetComponent<Image>().color = Color.green;
         while (countUp > 0)
@@ -69,7 +70,7 @@ public class Building : MonoBehaviour
            
             yield return new WaitForSeconds(0.05f);
             countUp -= 0.05f;
-            trainUI.transform.Find("Text").GetComponent<Text>().text = countUp.ToString();
+            trainUI.transform.Find("Text").GetComponent<TextMeshProUGUI>().text = countUp.ToString();
         }
 
         //then spawn object

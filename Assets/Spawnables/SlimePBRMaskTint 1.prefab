@@ -373,7 +373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 500
   trainTime: 10
-  name: Shadow Slime
+  objectName: Shadow Slime
 --- !u!1 &1752920092077010
 GameObject:
   m_ObjectHideFlags: 0

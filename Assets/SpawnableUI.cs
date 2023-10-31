@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using TMPro;
 public class SpawnableUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
 
@@ -24,7 +25,8 @@ public class SpawnableUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     void turnUIOn()
     {
-        building.costUI.GetComponent<Text>().text = associatedSpawn.name + ": ¥" + associatedSpawn.cost.ToString();
+        //print(associatedSpawn.objectName);
+        building.costUI.GetComponent<TextMeshProUGUI>().text = associatedSpawn.objectName + ": ¥" + associatedSpawn.cost.ToString();
         building.costUI.SetActive(true);
     }
     

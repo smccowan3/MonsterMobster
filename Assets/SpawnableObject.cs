@@ -8,7 +8,7 @@ public class SpawnableObject : MonoBehaviour
     // Start is called before the first frame update
     public float cost;
     public float trainTime;
-    public string name;
+    public string objectName;
     
     void Start()
     {

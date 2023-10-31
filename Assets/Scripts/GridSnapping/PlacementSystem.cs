@@ -53,8 +53,8 @@ public class PlacementSystem : MonoBehaviour
 
  
 
-        Quaternion rotation = Quaternion.Euler(90, Camera.main.transform.eulerAngles.y, 0);
-        cellIndicator.transform.rotation = rotation;
+        //Quaternion rotation = Quaternion.Euler(90, Camera.main.transform.eulerAngles.y, 0);
+        //cellIndicator.transform.rotation = rotation;
 
     }
 }
