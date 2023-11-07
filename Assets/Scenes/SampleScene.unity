@@ -610,6 +610,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: c511f893cf83d4b47910f09c80807805, type: 3}
     - target: {fileID: -7530365171286598578, guid: 6514fa9b7b0a5014e90d20460bf47135, type: 3}
+      propertyPath: m_Color.b
+      value: 0.028657902
+      objectReference: {fileID: 0}
+    - target: {fileID: -7530365171286598578, guid: 6514fa9b7b0a5014e90d20460bf47135, type: 3}
+      propertyPath: m_Color.g
+      value: 0.16442162
+      objectReference: {fileID: 0}
+    - target: {fileID: -7530365171286598578, guid: 6514fa9b7b0a5014e90d20460bf47135, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8679245
+      objectReference: {fileID: 0}
+    - target: {fileID: -7530365171286598578, guid: 6514fa9b7b0a5014e90d20460bf47135, type: 3}
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
@@ -2437,7 +2449,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &1157746395
 Light:
   m_ObjectHideFlags: 0
@@ -2449,7 +2461,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 0.62411004, g: 0.6433824, b: 0.7075472, a: 1}
   m_Intensity: 1.2
   m_Range: 10
   m_SpotAngle: 30
@@ -3127,7 +3139,6 @@ GameObject:
   - component: {fileID: 1904755258}
   - component: {fileID: 1904755257}
   - component: {fileID: 1904755256}
-  - component: {fileID: 1904755259}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -3156,12 +3167,12 @@ Terrain:
   m_Enabled: 1
   serializedVersion: 6
   m_TerrainData: {fileID: 15600000, guid: bb87b54f4f862a04e980511c04f996ba, type: 2}
-  m_TreeDistance: 30
-  m_TreeBillboardDistance: 12
+  m_TreeDistance: 5
+  m_TreeBillboardDistance: 5
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
-  m_DetailObjectDistance: 47
-  m_DetailObjectDensity: 0.3
+  m_DetailObjectDistance: 0
+  m_DetailObjectDensity: 0
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 300
   m_HeightmapMaximumLOD: 0
@@ -3171,7 +3182,7 @@ Terrain:
   m_DrawTreesAndFoliage: 1
   m_ReflectionProbeUsage: 1
   m_MaterialTemplate: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  m_BakeLightProbesForTrees: 0
+  m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1
   m_ScaleInLightmap: 0.0256
@@ -3193,26 +3204,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1904755259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1904755255}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 711e5ff84fa732d4097a64280eeb14bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  terrain: {fileID: 1904755257}
-  textureIndex: 3
-  paintArea:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 10
-    height: 10
 --- !u!1 &1925160862
 GameObject:
   m_ObjectHideFlags: 0
