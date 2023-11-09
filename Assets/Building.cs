@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
@@ -62,15 +63,15 @@ public class Building : MonoBehaviour
     IEnumerator BeginCountdown(GameObject spawnObject, int index)
     {
         float countUp = spawnObject.GetComponent<SpawnableObject>().trainTime;
-        trainUI.transform.Find("Text").GetComponent<TextMeshProUGUI>().text = countUp.ToString();
+        trainUI.transform.Find("Text").GetComponent<TextMeshProUGUI>().text = Math.Round(countUp,2).ToString();
         trainUI.transform.Find("Text").gameObject.SetActive(true); 
         trainUI.GetComponent<Image>().color = Color.green;
         while (countUp > 0)
         {
            
-            yield return new WaitForSeconds(0.05f);
-            countUp -= 0.05f;
-            trainUI.transform.Find("Text").GetComponent<TextMeshProUGUI>().text = countUp.ToString();
+            yield return new WaitForSeconds(1f);
+            countUp -= 1f;
+            trainUI.transform.Find("Text").GetComponent<TextMeshProUGUI>().text = Math.Round(countUp, 2).ToString();
         }
 
         //then spawn object

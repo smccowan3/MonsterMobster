@@ -108,7 +108,7 @@ NavMeshSettings:
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
-    agentSlope: 45
+    agentSlope: 25.4
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: b41f5ad6b35866f4f8cdbc96cbae5006, type: 2}
 --- !u!1 &237943585
 GameObject:
   m_ObjectHideFlags: 0
@@ -1143,8 +1143,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Buildings
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d77aa1826f3080e4181ebce0443e9031, type: 2}
-  m_sharedMaterial: {fileID: -5010149383923750752, guid: d77aa1826f3080e4181ebce0443e9031, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cea7862967905224b97f9dd639743411, type: 2}
+  m_sharedMaterial: {fileID: -2460634428357247077, guid: cea7862967905224b97f9dd639743411, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2602,7 +2602,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: d7cffddcbc0cc8f4ebe6e28eb9804082, type: 3}
+    m_Font: {fileID: 12800000, guid: cacc8266f7dcdfe42aa2b7efb71441b4, type: 3}
     m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
@@ -2850,6 +2850,7 @@ MonoBehaviour:
   mouseHoveringObject: {fileID: 0}
   gridManager: {fileID: 0}
   grid: {fileID: 801066143}
+  movementIndicator: {fileID: 3280519133390621005, guid: a71be3e7990efb040a07565c43cbb198, type: 3}
 --- !u!1 &1543245707
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class ClickableObject : MonoBehaviour
 {
     public GameObject UI;
     GameObject manager;
     public Vector3 gridSize;
-     
-     //the manager for clickable objects
+    GameObject currentPathEnd;
+
+
+    //the manager for clickable objects
     // Start is called before the first frame update
     void Start()
     {
@@ -18,9 +22,18 @@ public class ClickableObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
+    public void changePathEnd(GameObject endpoint)    
+    {
+        if(currentPathEnd != null)
+        {
+            Destroy(currentPathEnd);
+        }
+        currentPathEnd = endpoint;
+
+    }
 
     public void showUI()
     {
@@ -42,12 +55,28 @@ public class ClickableObject : MonoBehaviour
 
     public void moveDrag()
     {
-        manager.GetComponent<ClickableObjectManager>().moveDragObject(transform.parent.gameObject);
+        if(transform.parent != null)
+        {
+            manager.GetComponent<ClickableObjectManager>().moveDragObject(transform.parent.gameObject);
+        }
+        else
+        {
+            manager.GetComponent<ClickableObjectManager>().moveDragObject(gameObject);
+        }
+        
     }
 
     private void OnMouseOver()
     {
-        manager.GetComponent<ClickableObjectManager>().setMouseHovering(transform.parent.gameObject);
+        if(transform.parent!= null)
+        {
+            manager.GetComponent<ClickableObjectManager>().setMouseHovering(transform.parent.gameObject);
+        }
+        else
+        {
+            manager.GetComponent<ClickableObjectManager>().setMouseHovering(gameObject);
+        }
+       
     }
     private void OnMouseExit()
     {

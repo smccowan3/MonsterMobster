@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class ClickableObjectManager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class ClickableObjectManager : MonoBehaviour
     public GameObject mouseHoveringObject;
     public GridManager gridManager;
     public Grid grid;
+    public GameObject movementIndicator;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,20 +25,40 @@ public class ClickableObjectManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            
+
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-           
+
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, 100))
             {
-                
-                if(hit.collider.gameObject.GetComponent<ClickableObject>() != null)
+
+                if (hit.collider.gameObject.GetComponent<ClickableObject>() != null)
                 {
                     print("hit");
                     changeClickedObject(hit.collider.gameObject);
                 }
+                else
+                {
+                    //changeClickedObject(null);
+                }
+            }
+
+        }
+
+        if (Input.GetMouseButton(1))
+        {
+            if (currentClickedObject != null)
+            {
+                if (currentClickedObject.GetComponent<NavMeshAgent>() != null)
+                {
+                    currentClickedObject.GetComponent<NavMeshAgent>().SetDestination(GameObject.Find("MouseIndicator").transform.position);
+                    GameObject endpoint = Instantiate(movementIndicator,GameObject.Find("MouseIndicator").transform.position, GameObject.Find("MouseIndicator").transform.rotation);
+                    currentClickedObject.GetComponent<ClickableObject>().changePathEnd(endpoint);
+                    changeClickedObject(null);
+                }
             }
         }
+
 
         if(currentlyDraggingObject != null)
         {
