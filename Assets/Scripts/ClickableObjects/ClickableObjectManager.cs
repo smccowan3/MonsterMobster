@@ -34,7 +34,7 @@ public class ClickableObjectManager : MonoBehaviour
 
                 if (hit.collider.gameObject.GetComponent<ClickableObject>() != null)
                 {
-                    print("hit");
+                    
                     changeClickedObject(hit.collider.gameObject);
                 }
                 else

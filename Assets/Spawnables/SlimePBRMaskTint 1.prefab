@@ -322,6 +322,7 @@ GameObject:
   - component: {fileID: 2952115712152281762}
   - component: {fileID: 2029492208831364289}
   - component: {fileID: 7413699110043763569}
+  - component: {fileID: 4437354614524772306}
   m_Layer: 0
   m_Name: SlimePBRMaskTint 1
   m_TagString: Untagged
@@ -391,7 +392,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8990d6b44cfd3f4fb99f9c73fc79f05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  job: 
+  job: Woodcutting
+  rayCount: 15
+  arcAngle: 45
+  rayDistance: 2.5
 --- !u!65 &5772084317229948194
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -457,6 +461,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
   gridSize: {x: 1, y: 1, z: 1}
+--- !u!114 &4437354614524772306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591548031869842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd77a203885f355449269f498f3f8706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1752920092077010
 GameObject:
   m_ObjectHideFlags: 0
