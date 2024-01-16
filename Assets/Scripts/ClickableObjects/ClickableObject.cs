@@ -17,6 +17,10 @@ public class ClickableObject : MonoBehaviour
     void Start()
     {
         manager = GameObject.Find("ClickableObjectManager");
+        if(GetComponent<LineRenderer>() != null)
+        {
+            GetComponent<LineRenderer>().enabled = false;
+        }
     }
 
     // Update is called once per frame
@@ -32,8 +36,17 @@ public class ClickableObject : MonoBehaviour
             Destroy(currentPathEnd);
         }
         currentPathEnd = endpoint;
-
+        DrawLine();
     }
+
+    void DrawLine()
+    {
+        if(GetComponent<LineRenderer>()!= null)
+        {
+
+        }
+    }
+
 
     public void showUI()
     {

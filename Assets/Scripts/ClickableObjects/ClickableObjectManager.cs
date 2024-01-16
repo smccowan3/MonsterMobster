@@ -54,6 +54,7 @@ public class ClickableObjectManager : MonoBehaviour
                     currentClickedObject.GetComponent<NavMeshAgent>().SetDestination(GameObject.Find("MouseIndicator").transform.position);
                     GameObject endpoint = Instantiate(movementIndicator,GameObject.Find("MouseIndicator").transform.position, GameObject.Find("MouseIndicator").transform.rotation);
                     currentClickedObject.GetComponent<ClickableObject>().changePathEnd(endpoint);
+                    endpoint.GetComponent<PathLinkerAndDeleter>().LinkObject(currentClickedObject);
                     changeClickedObject(null);
                 }
             }

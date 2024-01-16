@@ -37,8 +37,8 @@ public class Building : MonoBehaviour
             spawnablesUI[i].GetComponent<SpawnableUI>().building = this;
             spawnablesUI[i].GetComponent<SpawnableUI>().spawnIndex = i;
             spawnablesUI[i].GetComponent<SpawnableUI>().associatedSpawn = spawnables[i].GetComponent<SpawnableObject>();
-            Texture2D previewTexture = AssetPreview.GetAssetPreview(spawnables[i]);
-            spawnablesUI[i].GetComponent<Image>().sprite = Sprite.Create(previewTexture, new Rect(0,0, previewTexture.width, previewTexture.height), Vector2.zero);
+            //Texture2D previewTexture = AssetPreview.GetAssetPreview(spawnables[i]);
+            spawnablesUI[i].GetComponent<Image>().sprite = spawnables[i].transform.Find("Thumbnail").GetComponent<SpriteRenderer>().sprite;
         }
         
     }

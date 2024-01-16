@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEditor.IMGUI.Controls;
 using UnityEngine;
 using UnityEngine.AI;
@@ -13,7 +14,10 @@ public class MonsterUnit : MonoBehaviour
     public int rayCount = 5; // Adjust the number of rays in the arc
     public float arcAngle = 45f; // Adjust the angle of the arc
     public float rayDistance = 10f; // Adjust the distance of the rays
+
+    //woodcutting
     public float woodcuttingTime = 10f;
+    public float treeDropDistance = 2f;
     // Start is called before the first frame update
     void Start()
     {
@@ -98,41 +102,87 @@ public class MonsterUnit : MonoBehaviour
 
     IEnumerator waitForCut(Animator treeAnimator)
     {
-        treeAnimator.SetTrigger("Cut Down");
-        yield return new WaitForSeconds(woodcuttingTime/2);
-        StartCoroutine(rotateTreeDependingOnPlayer(treeAnimator.gameObject));
+        //treeAnimator.SetTrigger("Cut Down");
+        
+        //StartCoroutine(rotateTreeDependingOnPlayer(treeAnimator.gameObject));
+        StartCoroutine(fadeTreeOut(treeAnimator.gameObject));
+        //yield return new WaitForSeconds(woodcuttingTime / 2);
+        
+        
+        yield return null;
+    }
+
+    IEnumerator fadeTreeOut(GameObject tree)
+    {
         yield return new WaitForSeconds(woodcuttingTime / 2);
-        Destroy(treeAnimator.gameObject);
+        float fadeSpeed = woodcuttingTime/2;
+        float currTime = 0;
+        Renderer rend = tree.GetComponentInChildren<Renderer>();
+        
+        //Color color = rend.material.color;
+        //Color newAlpha = new Color(color.r, color.g, color.b, color.a);
+        while (currTime < fadeSpeed)
+        {
+            currTime += Time.deltaTime;
+            Transform[] trees = tree.GetComponentsInChildren<Transform>();
+            for (int i = 0; i < trees.Length; i++)
+            {
+                trees[i].transform.localScale = Vector3.Lerp(new Vector3(1, 1, 1), new Vector3(0.8f, 0.8f, 0.8f), currTime / fadeSpeed);
+                Debug.Log($"Tree {i + 1} Scale: {trees[i].transform.localScale}");
+                
+            }
+            /*for(int i = 0; i< rend.materials.Length; i++)
+            {
+                rend.materials[i].SetFloat("_CutOff", Mathf.Lerp(0, 1, currTime / fadeSpeed));
+            }*/
+            yield return null;
+
+        }
+        Destroy(tree);
         slimeAnimator.SetBool("Woodcutting", false);
         busy = false;
         print("+1 wood");
         yield return null;
+
     }
+
 
     IEnumerator rotateTreeDependingOnPlayer(GameObject tree)
     {
+        //also move tree
         // Get the initial rotation of the object
         Quaternion startRotation = tree.transform.rotation;
+        Vector3 startPosition = tree.transform.position;
 
         // Calculate the target rotation away from the player
-        Vector3 directionToPlayer = transform.position - tree.transform.position;
+        Vector3 directionToPlayer = transform.Find("Body").position - tree.transform.position;
         // Project the direction onto the XZ plane to get the rotation axis
         Vector3 rotationAxis = Vector3.ProjectOnPlane(directionToPlayer, Vector3.up).normalized;
 
         // Calculate the target rotation by rotating around the calculated axis
         Quaternion targetRotation = Quaternion.AngleAxis(90f, rotationAxis) * startRotation;
+        
         float rotationDuration = woodcuttingTime / 2;
         // Interpolate the rotation over time
         float elapsedTime = 0f;
         while (elapsedTime < rotationDuration)
         {
-            tree.transform.rotation = Quaternion.Slerp(startRotation, targetRotation, elapsedTime / rotationDuration);
-            elapsedTime += Time.deltaTime;
-            yield return null;
+            if (tree != null)
+            {
+                Vector3 moveDirection = -directionToPlayer.normalized;
+                Vector3 targetPosition = startPosition + moveDirection * treeDropDistance;
+                tree.transform.position = Vector3.Lerp(startPosition, targetPosition, elapsedTime / rotationDuration);
+                tree.transform.rotation = Quaternion.Slerp(startRotation, targetRotation, elapsedTime / rotationDuration);
+                elapsedTime += Time.deltaTime;
+                yield return null;
+            }
         }
-
+         
         // Ensure the final rotation is exactly the target rotation
         tree.transform.rotation = targetRotation;
+        tree.transform.position = startPosition + -directionToPlayer.normalized * treeDropDistance;
+        Destroy(tree);
+        yield return null;
     }
 
 

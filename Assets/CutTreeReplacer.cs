@@ -26,9 +26,7 @@ public class CutTreeReplacer : MonoBehaviour
         TerrainData terrainData = terrain.terrainData;
         List<TreeInstance> trees = new List<TreeInstance>(terrainData.treeInstances);
         // Remove the tree instance at the specified index
-        
-       
-
+ 
         // Get the prototype index of the removed tree
         int prototypeIndex = trees[treeIndex].prototypeIndex;
         Quaternion treeRotation = Quaternion.Euler(0f, trees[treeIndex].rotation, 0f);

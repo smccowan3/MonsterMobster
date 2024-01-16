@@ -40,6 +40,7 @@ public  class TerrainStartStatePreserver: MonoBehaviour
         if (terrain != null)
         {
             TerrainData terrainData = terrain.terrainData;
+           
             terrainData.treeInstances = initialTrees.Clone() as TreeInstance[];
             terrain.Flush();
         }

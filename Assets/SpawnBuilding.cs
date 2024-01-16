@@ -9,8 +9,8 @@ public class SpawnBuilding : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Texture2D previewTexture = AssetPreview.GetAssetPreview(building);
-        GetComponent<Image>().sprite = Sprite.Create(previewTexture, new Rect(0, 0, previewTexture.width, previewTexture.height), Vector2.zero);
+        //Texture2D previewTexture = AssetPreview.GetAssetPreview(building);
+        GetComponent<Image>().sprite = building.transform.Find("Thumbnail").GetComponent<SpriteRenderer>().sprite;
     }
 
     // Update is called once per frame
