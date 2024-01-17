@@ -5,10 +5,12 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     GameObject prioritisedUI;
+    GameObject mainMenu;
     // Start is called before the first frame update
     void Start()
     {
-        //prioritisedUI = GameObject.Find("MainSpawnUI");
+        mainMenu = transform.Find("Main/MainMenu").gameObject;
+        prioritisedUI = mainMenu;
     }
 
     // Update is called once per frame
@@ -23,7 +25,7 @@ public class UIManager : MonoBehaviour
         {
             prioritisedUI.SetActive(false);
         }
-
+        print("showing" + newUI.name);
         newUI.SetActive(true);
         prioritisedUI = newUI;
     }
@@ -32,15 +34,16 @@ public class UIManager : MonoBehaviour
     {
         if(prioritisedUI != null)
         {
-            prioritisedUI.SetActive(false);
-            prioritisedUI = null;
+            reprioritise(mainMenu);
+
         }
+
        
     }
 
     public void ShowMainBuildingSpawnUI()
     {
-        reprioritise(transform.Find("MainSpawnUI").gameObject);
+        reprioritise(transform.Find("Main/Residential Buildings").gameObject);
     }
 
 }

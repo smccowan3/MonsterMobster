@@ -19,15 +19,15 @@ public class Building : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mainUI.transform.SetParent(GameObject.Find("MainUI").transform, false);
-        Vector3 newLocation = GameObject.Find("MainUI/MiddleLocation").GetComponent<RectTransform>().position;
-        mainUI.GetComponent<RectTransform>().position = newLocation;
-        mainUI.GetComponent<RectTransform>().rotation = new Quaternion(0, 0, 0, 0);
+        
+        //Vector3 newLocation = GameObject.Find("MainUI/MiddleLocation").GetComponent<RectTransform>().position;
+        //mainUI.GetComponent<RectTransform>().position = newLocation;
+        //mainUI.GetComponent<RectTransform>().rotation = new Quaternion(0, 0, 0, 0);
         trainUI = mainUI.transform.Find("TrainUI").gameObject;
         nameUI = mainUI.transform.Find("NameText").gameObject;
         nameUI.GetComponent<TextMeshProUGUI>().text = objectName;
-        trainUI.GetComponent<Image>().color = Color.red; //idle color
-        trainUI.transform.Find("Text").gameObject.SetActive(false);
+        //trainUI.GetComponent<Image>().color = Color.red; //idle color
+        //trainUI.transform.Find("Text").gameObject.SetActive(false);
         costUI = mainUI.transform.Find("Cost").gameObject;
         spawnablesUI = new List<GameObject>();
         for (int i = 0; i < spawnables.Count; i++)
@@ -40,6 +40,7 @@ public class Building : MonoBehaviour
             //Texture2D previewTexture = AssetPreview.GetAssetPreview(spawnables[i]);
             spawnablesUI[i].GetComponent<Image>().sprite = spawnables[i].transform.Find("Thumbnail").GetComponent<SpriteRenderer>().sprite;
         }
+        mainUI.transform.SetParent(GameObject.Find("MainUI").transform, false);
         
     }
 
@@ -65,7 +66,7 @@ public class Building : MonoBehaviour
         float countUp = spawnObject.GetComponent<SpawnableObject>().trainTime;
         trainUI.transform.Find("Text").GetComponent<TextMeshProUGUI>().text = Math.Round(countUp,2).ToString();
         trainUI.transform.Find("Text").gameObject.SetActive(true); 
-        trainUI.GetComponent<Image>().color = Color.green;
+        //trainUI.GetComponent<Image>().color = Color.green;
         while (countUp > 0)
         {
            
@@ -83,7 +84,7 @@ public class Building : MonoBehaviour
         trainUI.transform.Find("Text").gameObject.SetActive(false);
 
         currentlySpawning = false;
-        trainUI.GetComponent<Image>().color = Color.red;
+        //trainUI.GetComponent<Image>().color = Color.red;
         costUI.SetActive(false);
         spawnablesUI[index].GetComponent<SpawnableUI>().buttonToggle = false;
         yield return null;

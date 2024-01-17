@@ -10,7 +10,15 @@ public class SpawnBuilding : MonoBehaviour
     void Start()
     {
         //Texture2D previewTexture = AssetPreview.GetAssetPreview(building);
-        GetComponent<Image>().sprite = building.transform.Find("Thumbnail").GetComponent<SpriteRenderer>().sprite;
+        if(building == null)
+        {
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            GetComponent<Image>().sprite = building.transform.Find("Thumbnail").GetComponent<SpriteRenderer>().sprite;
+        }
+       
     }
 
     // Update is called once per frame

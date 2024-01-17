@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Net;
+using System.Numerics;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -8,7 +9,7 @@ public class ClickableObject : MonoBehaviour
 {
     public GameObject UI;
     GameObject manager;
-    public Vector3 gridSize;
+    public UnityEngine.Vector3 gridSize;
     GameObject currentPathEnd;
 
 
@@ -19,14 +20,57 @@ public class ClickableObject : MonoBehaviour
         manager = GameObject.Find("ClickableObjectManager");
         if(GetComponent<LineRenderer>() != null)
         {
-            GetComponent<LineRenderer>().enabled = false;
+            
         }
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(GetComponent<NavMeshAgent>() != null)
+        {
+            if (GetComponent<NavMeshAgent>().hasPath)
+            {
+              
+                NavMeshAgent agent = GetComponent<NavMeshAgent>();
+                LineRenderer lineRenderer = GetComponent<LineRenderer>();
 
+                lineRenderer.startWidth = 0.15f;
+                lineRenderer.endWidth = 0.15f;
+                lineRenderer.startColor = Color.yellow;
+                lineRenderer.endColor = Color.yellow;
+
+                // Enable LineRenderer
+
+                UnityEngine.Vector3[] pathPoints = agent.path.corners;
+
+                // Set the number of line points to match the number of path corners
+                lineRenderer.positionCount = pathPoints.Length;
+                lineRenderer.SetPosition(0, transform.position);
+
+
+                if (pathPoints.Length < 2)
+                {
+                    
+                }
+                else
+                {
+                    // Project path points onto the plane
+                    for (int i = 1; i < pathPoints.Length; i++)
+                    {
+                        UnityEngine.Vector3 pointPosition = new UnityEngine.Vector3(pathPoints[i].x, pathPoints[i].y, pathPoints[i].z);
+                        lineRenderer.SetPosition(i, pointPosition);
+                    }
+                }
+
+
+
+               
+
+
+            }
+        }
+        
     }
 
     public void changePathEnd(GameObject endpoint)    
@@ -34,18 +78,27 @@ public class ClickableObject : MonoBehaviour
         if(currentPathEnd != null)
         {
             Destroy(currentPathEnd);
+            
         }
+        GetComponent<NavMeshAgent>().SetDestination(endpoint.transform.position);
         currentPathEnd = endpoint;
-        DrawLine();
+       
     }
 
-    void DrawLine()
+    IEnumerator DrawLine()
     {
         if(GetComponent<LineRenderer>()!= null)
         {
-
+            while (!GetComponent<NavMeshAgent>().hasPath)
+            {
+                yield return null;
+            }
+            
         }
+        yield return null;
     }
+
+   
 
 
     public void showUI()

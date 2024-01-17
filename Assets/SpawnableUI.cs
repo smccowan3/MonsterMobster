@@ -14,7 +14,7 @@ public class SpawnableUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     // Start is called before the first frame update
     void Start()
     {
-        
+        turnUIOn();
     }
 
     // Update is called once per frame
@@ -33,12 +33,12 @@ public class SpawnableUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        turnUIOn();
+        //turnUIOn();
         
     }
     public void OnPointerExit(PointerEventData eventData)
     {
-        if(!buttonToggle) building.costUI.SetActive(false);
+        //if(!buttonToggle) building.costUI.SetActive(false);
     }
     public void toggleOn()
     {

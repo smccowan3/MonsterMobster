@@ -26,6 +26,8 @@ public class PathLinkerAndDeleter : MonoBehaviour
     {
         if(other.gameObject == linkedObject)
         {
+            linkedObject.GetComponent<LineRenderer>().positionCount = 0;
+            
             Destroy(gameObject);
         }
     }
