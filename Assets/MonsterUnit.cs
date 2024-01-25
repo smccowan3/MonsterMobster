@@ -4,6 +4,7 @@ using UnityEditor;
 using UnityEditor.IMGUI.Controls;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.ParticleSystemJobs;
 
 public class MonsterUnit : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class MonsterUnit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        job = null;
         busy = false;
         slimeAnimator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
@@ -114,6 +116,7 @@ public class MonsterUnit : MonoBehaviour
 
     IEnumerator fadeTreeOut(GameObject tree)
     {
+        
         yield return new WaitForSeconds(woodcuttingTime / 2);
         float fadeSpeed = woodcuttingTime/2;
         float currTime = 0;
@@ -128,7 +131,7 @@ public class MonsterUnit : MonoBehaviour
             for (int i = 0; i < trees.Length; i++)
             {
                 trees[i].transform.localScale = Vector3.Lerp(new Vector3(1, 1, 1), new Vector3(0.8f, 0.8f, 0.8f), currTime / fadeSpeed);
-                Debug.Log($"Tree {i + 1} Scale: {trees[i].transform.localScale}");
+                //Debug.Log($"Tree {i + 1} Scale: {trees[i].transform.localScale}");
                 
             }
             /*for(int i = 0; i< rend.materials.Length; i++)
@@ -184,6 +187,34 @@ public class MonsterUnit : MonoBehaviour
         Destroy(tree);
         yield return null;
     }
+
+    public void BecomeWoodcutter()
+    {
+        if (!busy)
+        {
+            if (job != null)
+            {
+                transform.Find("Body/" + job + "Hat").gameObject.SetActive(false);
+            }
+            job = "Woodcutting";
+            transform.Find("Body/WoodcuttingHat").gameObject.SetActive(true);
+        }
+        
+    }
+    public void NoJob()
+    {
+        if (!busy)
+        {
+            if (job != null)
+            {
+                transform.Find("Body/" + job + "Hat").gameObject.SetActive(false);
+            }
+            job = null;
+
+        }
+
+    }
+
 
 
 }

@@ -66,8 +66,22 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: c545ed4a78921c4b9abf74d82bf2251d
     GuidInternal: 
-    m_lastTime: -8584962352468968627
-    List: []
+    m_lastTime: -8584954135449006759
+    List:
+    - name: Main
+      guid: e8feeacc2924b94a95a376bca9c59bab
+      id: 3161908922
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c545ed4a78921c4b9abf74d82bf2251d
+      - ElementName: Main
+        ObjectType: 7
+        guid: e8feeacc2924b94a95a376bca9c59bab
+      Path: SoundBanks\Default Work Unit\Main
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -80,8 +94,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 830a84739c590e44be9373198f26036d
     GuidInternal: 
-    m_lastTime: -8584962352467781666
-    List: []
+    m_lastTime: -8584954136240878352
+    List:
+    - name: BuildingPlacement
+      guid: 0ba74f17ca3a7e40b9f33cfcc03d4742
+      id: 4221916518
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 830a84739c590e44be9373198f26036d
+      - ElementName: BuildingPlacement
+        ObjectType: 3
+        guid: 0ba74f17ca3a7e40b9f33cfcc03d4742
+      Path: Events\Default Work Unit\BuildingPlacement
+      maxAttenuation: 0
+      maxDuration: 0.25013742
+      minDuration: 0.25013742
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -139,7 +170,7 @@ MonoBehaviour:
     m_lastTime: -8584962352466602475
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 010000000500000006000000070000000a0000000b0000000c000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

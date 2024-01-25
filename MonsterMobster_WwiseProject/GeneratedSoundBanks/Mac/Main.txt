@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	4221916518	BuildingPlacement			\Default Work Unit\BuildingPlacement	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	190858653	WoodHitQuick_FS10-87_01	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Mac\SFX\WoodHitQuick_FS10-87.01_E00E8FC2.wem		\Actor-Mixer Hierarchy\Default Work Unit\WoodHitQuick_FS10-87_01		48124
+

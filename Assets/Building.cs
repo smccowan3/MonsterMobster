@@ -28,7 +28,7 @@ public class Building : MonoBehaviour
         nameUI.GetComponent<TextMeshProUGUI>().text = objectName;
         //trainUI.GetComponent<Image>().color = Color.red; //idle color
         //trainUI.transform.Find("Text").gameObject.SetActive(false);
-        costUI = mainUI.transform.Find("Cost").gameObject;
+        costUI = mainUI.transform.Find("TrainUI/Cost").gameObject;
         spawnablesUI = new List<GameObject>();
         for (int i = 0; i < spawnables.Count; i++)
         {
@@ -64,15 +64,17 @@ public class Building : MonoBehaviour
     IEnumerator BeginCountdown(GameObject spawnObject, int index)
     {
         float countUp = spawnObject.GetComponent<SpawnableObject>().trainTime;
-        trainUI.transform.Find("Text").GetComponent<TextMeshProUGUI>().text = Math.Round(countUp,2).ToString();
-        trainUI.transform.Find("Text").gameObject.SetActive(true); 
+        string originalValue = costUI.GetComponent<TextMeshProUGUI>().text;
+        trainUI.GetComponentInChildren<TextMeshProUGUI>().text = Math.Round(countUp,2).ToString();
+        costUI.SetActive(true);
+        
         //trainUI.GetComponent<Image>().color = Color.green;
         while (countUp > 0)
         {
            
             yield return new WaitForSeconds(1f);
             countUp -= 1f;
-            trainUI.transform.Find("Text").GetComponent<TextMeshProUGUI>().text = Math.Round(countUp, 2).ToString();
+            trainUI.GetComponentInChildren<TextMeshProUGUI>().text = Math.Round(countUp, 2).ToString();
         }
 
         //then spawn object
@@ -81,11 +83,13 @@ public class Building : MonoBehaviour
 
         Vector3 newPos = currentPos + transform.forward*5;
         Instantiate(spawnObject, newPos, currentRotation);
-        trainUI.transform.Find("Text").gameObject.SetActive(false);
+        
 
         currentlySpawning = false;
         //trainUI.GetComponent<Image>().color = Color.red;
-        costUI.SetActive(false);
+        trainUI.GetComponentInChildren<TextMeshProUGUI>().text = "Spawned!";
+        yield return new WaitForSeconds(1f);
+        trainUI.GetComponentInChildren<TextMeshProUGUI>().text = originalValue;
         spawnablesUI[index].GetComponent<SpawnableUI>().buttonToggle = false;
         yield return null;
 

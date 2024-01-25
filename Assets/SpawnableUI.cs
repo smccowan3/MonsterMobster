@@ -26,7 +26,7 @@ public class SpawnableUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     void turnUIOn()
     {
         //print(associatedSpawn.objectName);
-        building.costUI.GetComponent<TextMeshProUGUI>().text = associatedSpawn.objectName + ": ¥" + associatedSpawn.cost.ToString();
+        building.costUI.GetComponent<TextMeshProUGUI>().text = associatedSpawn.objectName + "\nTrain Time: " + associatedSpawn.trainTime.ToString() +"s";
         building.costUI.SetActive(true);
     }
     

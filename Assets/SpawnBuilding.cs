@@ -30,6 +30,7 @@ public class SpawnBuilding : MonoBehaviour
     public void spawnBuilding()
     {
         GameObject bldg = Instantiate(building, Input.mousePosition, new Quaternion (0,0,0,0));
+        FindAnyObjectByType<UIManager>().closeThis();
         GameObject.Find("ClickableObjectManager").GetComponent<ClickableObjectManager>().moveDragObject(bldg);
     }
 

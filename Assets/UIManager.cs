@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    GameObject prioritisedUI;
+    public GameObject prioritisedUI;
+    public GameObject mainPrioritisedUI;
     GameObject mainMenu;
     // Start is called before the first frame update
     void Start()
     {
         mainMenu = transform.Find("Main/MainMenu").gameObject;
-        prioritisedUI = mainMenu;
+        mainPrioritisedUI = mainMenu;
     }
 
     // Update is called once per frame
@@ -25,25 +26,49 @@ public class UIManager : MonoBehaviour
         {
             prioritisedUI.SetActive(false);
         }
+        
+        if(newUI != null)
+        {
+            newUI.SetActive(true);
+        }
+        
+        prioritisedUI = newUI;
+    }
+
+    public void reprioritiseMain(GameObject newUI)
+    {
+        if (mainPrioritisedUI != null)
+        {
+            mainPrioritisedUI.SetActive(false);
+        }
         print("showing" + newUI.name);
         newUI.SetActive(true);
-        prioritisedUI = newUI;
+        mainPrioritisedUI = newUI;
     }
 
     public void closeThis()
     {
         if(prioritisedUI != null)
         {
-            reprioritise(mainMenu);
+            reprioritise(null);
 
         }
 
        
     }
 
+    public void closeThisMain()
+    {
+        if (mainPrioritisedUI != null)
+        {
+            reprioritiseMain(mainMenu);
+
+        }
+    }
+
     public void ShowMainBuildingSpawnUI()
     {
-        reprioritise(transform.Find("Main/Residential Buildings").gameObject);
+        reprioritiseMain(transform.Find("Main/Residential Buildings").gameObject);
     }
 
 }

@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{73840A83-599C-440E-BE93-73198F26036D}" SchemaVersion="119">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{73840A83-599C-440E-BE93-73198F26036D}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{73840A83-599C-440E-BE93-73198F26036D}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="BuildingPlacement" ID="{174FA70B-3ACA-407E-B9F3-3CFCC03D4742}">
+					<ChildrenList>
+						<Action Name="" ID="{DD4880BB-E2D2-4D8B-9AAC-A70E58E82046}" ShortID="945902058">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WoodHitQuick_FS10-87_01" ID="{F4A1445B-93CD-4963-A97F-4A0A65793871}" WorkUnitID="{A3B01B5F-C3D2-42B4-AD35-908B43EBC05D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Building
   - Tree
+  - FButton
   layers:
   - Default
   - TransparentFX

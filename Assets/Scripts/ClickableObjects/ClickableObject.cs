@@ -4,6 +4,8 @@ using System.Net;
 using System.Numerics;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.TextCore.Text;
+using UnityEngine.UI;
 
 public class ClickableObject : MonoBehaviour
 {
@@ -22,54 +24,86 @@ public class ClickableObject : MonoBehaviour
         {
             
         }
+        /*if(UI.GetComponent<Canvas>().worldCamera == null)
+        {
+            UI.GetComponent<Canvas>().worldCamera = Camera.main;
+        }*/
+        UI.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(GetComponent<MonsterUnit>() != null)
+        {
+            if (GetComponent<MonsterUnit>().busy)
+            {
+                GetComponent<NavMeshAgent>().SetDestination(transform.position);
+            }
+        }
+
         if(GetComponent<NavMeshAgent>() != null)
         {
             if (GetComponent<NavMeshAgent>().hasPath)
-            {
-              
-                NavMeshAgent agent = GetComponent<NavMeshAgent>();
-                LineRenderer lineRenderer = GetComponent<LineRenderer>();
-
-                lineRenderer.startWidth = 0.15f;
-                lineRenderer.endWidth = 0.15f;
-                lineRenderer.startColor = Color.yellow;
-                lineRenderer.endColor = Color.yellow;
-
-                // Enable LineRenderer
-
-                UnityEngine.Vector3[] pathPoints = agent.path.corners;
-
-                // Set the number of line points to match the number of path corners
-                lineRenderer.positionCount = pathPoints.Length;
-                lineRenderer.SetPosition(0, transform.position);
-
-
-                if (pathPoints.Length < 2)
+                if(GetComponent<NavMeshAgent>().pathEndPosition != transform.position)
                 {
-                    
-                }
-                else
-                {
-                    // Project path points onto the plane
-                    for (int i = 1; i < pathPoints.Length; i++)
+
                     {
-                        UnityEngine.Vector3 pointPosition = new UnityEngine.Vector3(pathPoints[i].x, pathPoints[i].y, pathPoints[i].z);
-                        lineRenderer.SetPosition(i, pointPosition);
+
+                        NavMeshAgent agent = GetComponent<NavMeshAgent>();
+                        LineRenderer lineRenderer = GetComponent<LineRenderer>();
+
+                        lineRenderer.startWidth = 0.15f;
+                        lineRenderer.endWidth = 0.15f;
+                        lineRenderer.startColor = Color.yellow;
+                        lineRenderer.endColor = Color.yellow;
+
+                        // Enable LineRenderer
+
+                        UnityEngine.Vector3[] pathPoints = agent.path.corners;
+
+                        // Set the number of line points to match the number of path corners
+                        lineRenderer.positionCount = pathPoints.Length;
+                        lineRenderer.SetPosition(0, transform.position);
+
+
+                        if (pathPoints.Length < 2)
+                        {
+
+                        }
+                        else
+                        {
+                            // Project path points onto the plane
+                            for (int i = 1; i < pathPoints.Length; i++)
+                            {
+                                UnityEngine.Vector3 pointPosition = new UnityEngine.Vector3(pathPoints[i].x, pathPoints[i].y, pathPoints[i].z);
+                                lineRenderer.SetPosition(i, pointPosition);
+                            }
+                        }
                     }
-                }
-
-
-
-               
 
 
             }
         }
+
+        /*if(transform.Find("Button").gameObject.tag == "FButton")
+        {
+
+            UnityEngine.Vector3 characterScreenPosition = Camera.main.WorldToScreenPoint(transform.position);
+
+            // Convert the character's screen position to Canvas local position
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                transform.Find("Button").gameObject.GetComponentInParent<RectTransform>(),
+                characterScreenPosition,
+                Camera.main,
+                out UnityEngine.Vector2 localPoint
+            );
+
+            // Set the button's anchored position based on the character's position
+            transform.Find("Button").gameObject.GetComponent<RectTransform>().anchoredPosition = localPoint;
+
+
+        }*/
         
     }
 
