@@ -19,6 +19,12 @@ public class MonsterUnit : MonoBehaviour
     //woodcutting
     public float woodcuttingTime = 10f;
     public float treeDropDistance = 2f;
+
+
+    public int shelterCost;
+
+    public AK.Wwise.Event randomVoice;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -145,6 +151,7 @@ public class MonsterUnit : MonoBehaviour
         slimeAnimator.SetBool("Woodcutting", false);
         busy = false;
         print("+1 wood");
+        FindAnyObjectByType<WoodManager>().AddSubtractWood(10);
         yield return null;
 
     }
@@ -213,6 +220,16 @@ public class MonsterUnit : MonoBehaviour
 
         }
 
+    }
+
+    public void OnClickVoice()
+    {
+        float roll = Random.Range(1, 101);
+        if(roll > 30)
+        {
+            randomVoice.Post(gameObject);
+        }
+        
     }
 
 

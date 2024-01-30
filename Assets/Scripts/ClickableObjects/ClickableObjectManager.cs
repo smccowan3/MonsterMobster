@@ -14,6 +14,7 @@ public class ClickableObjectManager : MonoBehaviour
     public GridManager gridManager;
     public Grid grid;
     public GameObject movementIndicator;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -74,6 +75,12 @@ public class ClickableObjectManager : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
+                //we have placed the object
+                if(currentlyDraggingObject.GetComponentInParent<Building>() != null)
+                {
+                    print("play building sound");
+                    currentlyDraggingObject.GetComponentInParent<Building>().OnPlace();
+                }
                 currentlyDraggingObject = null; //place object here
                 changeClickedObject(null);
             }
@@ -102,10 +109,22 @@ public class ClickableObjectManager : MonoBehaviour
         if(currentClickedObject != null)
         {
             currentClickedObject.GetComponent<ClickableObject>().hideUI();
+           
         }
+       
         currentClickedObject = newObject;
-        if(newObject != null)
+        
+        if (newObject != null)
         {
+            if (currentClickedObject.GetComponentInParent<Building>())
+            {
+                currentClickedObject.GetComponentInParent<Building>().OnPlace();
+            }
+            if(currentClickedObject.GetComponent<MonsterUnit>()!= null)
+            {
+                currentClickedObject.GetComponent<MonsterUnit>().OnClickVoice();
+            }
+
             newObject.GetComponent<ClickableObject>().showUI();
         }
         

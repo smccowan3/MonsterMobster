@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class PostWwiseEvent : MonoBehaviour
 {
-    public AK.Wwise.Event MyEvent;
+    public List<AK.Wwise.Event> MyEvents;
+    public AK.Wwise.Event MyEvents2;
+    public List<AK.Wwise.Event> MyEvents3;
+    public List<AK.Wwise.Event> MyEvents4;
     // Start is called before the first frame update
     void Start()
     {
@@ -12,7 +15,23 @@ public class PostWwiseEvent : MonoBehaviour
     }
     public void PlaySound()
     {
-        MyEvent.Post(gameObject);
+        int randomInt = Random.Range(0, MyEvents.Count);
+        MyEvents[randomInt].Post(gameObject);
+    }
+
+    public void PlaySound2()
+    {
+        //int randomInt = Random.Range(0, MyEvents.Count);
+        MyEvents2.Post(gameObject);
+    }
+
+    public void PlaySound2Pass2Parent()
+    {
+        if (GetComponentInParent<ClickableObject>() != null)
+        {
+            MyEvents2.Post(GetComponentInParent<ClickableObject>().gameObject);
+        }
+        
     }
 
     // Update is called once per frame

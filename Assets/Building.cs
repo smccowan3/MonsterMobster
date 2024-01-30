@@ -16,6 +16,10 @@ public class Building : MonoBehaviour
     GameObject trainUI;
     GameObject nameUI;
     [SerializeField] string objectName;
+    public int shelterSupplied;
+    public List<AK.Wwise.Event> PlacementEvents;
+
+    public int buildingCost;
     // Start is called before the first frame update
     void Start()
     {
@@ -54,8 +58,18 @@ public class Building : MonoBehaviour
     {
         if (!currentlySpawning)
         {
-            StartCoroutine(BeginCountdown(spawnables[spawnObjectIndex], spawnObjectIndex));
-            currentlySpawning = true;
+            bool spawnable = FindAnyObjectByType<ShelterManage>().CheckIfShelterSufficient(spawnables[spawnObjectIndex].GetComponent<MonsterUnit>().shelterCost);
+            if(spawnable)
+            {
+                FindAnyObjectByType<ShelterManage>().AddSubtractShelter(-spawnables[spawnObjectIndex].GetComponent<MonsterUnit>().shelterCost);
+                StartCoroutine(BeginCountdown(spawnables[spawnObjectIndex], spawnObjectIndex));
+                currentlySpawning = true;
+            }
+            else
+            {
+                FindAnyObjectByType<ShelterManage>().DisplayErrorUI(spawnables[spawnObjectIndex].GetComponent<MonsterUnit>().shelterCost);
+            }
+            
         }
         
     }
@@ -95,6 +109,12 @@ public class Building : MonoBehaviour
 
 
 
+    }
+
+    public void OnPlace()
+    {
+        int randomSound = UnityEngine.Random.Range(0, PlacementEvents.Count);
+        PlacementEvents[randomSound].Post(gameObject);
     }
 
 }

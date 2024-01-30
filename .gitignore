@@ -61,6 +61,10 @@ sysinfo.txt
 *.unitypackage
 *.app
 
+/MonsterMobster_WwiseProject/
+/Assets/StreamingAssets/
+/Assets/Wwise/
+
 # Crashlytics generated file
 crashlytics-build.properties
 
@@ -72,3 +76,35 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 Assets/NotoSansJP-Regular SDF.asset.meta
 Assets/NotoSansJP-Regular SDF.asset
+MonsterMobster_WwiseProject/GeneratedSoundBanks/Windows/PluginInfo.xml
+MonsterMobster_WwiseProject/SoundBanks/Default Work Unit.wwu
+MonsterMobster_WwiseProject/MonsterMobster_WwiseProject.wproj
+MonsterMobster_WwiseProject/GeneratedSoundBanks/Windows/SoundbanksInfo.xml
+MonsterMobster_WwiseProject/GeneratedSoundBanks/Windows/PluginInfo.xml
+MonsterMobster_WwiseProject/GeneratedSoundBanks/Windows/Main.txt
+MonsterMobster_WwiseProject/GeneratedSoundBanks/Windows/Main.bnk
+MonsterMobster_WwiseProject/GeneratedSoundBanks/Windows/Init.bnk
+MonsterMobster_WwiseProject/GeneratedSoundBanks/Mac/SoundbanksInfo.xml
+MonsterMobster_WwiseProject/GeneratedSoundBanks/Mac/PluginInfo.xml
+MonsterMobster_WwiseProject/GeneratedSoundBanks/Mac/Main.txt
+MonsterMobster_WwiseProject/GeneratedSoundBanks/Mac/Main.bnk
+Assets/Wwise/API/Runtime/Plugins/Mac/DSP/libAkStereoDelay.bundle.meta
+Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset
+Assets/Wwise/API/Runtime/Plugins/Mac/DSP/libAkStereoDelay.bundle.meta
+Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset
+MonsterMobster_WwiseProject/Actor-Mixer Hierarchy/Default Work Unit.wwu
+MonsterMobster_WwiseProject/Attenuations/Default Work Unit.wwu
+MonsterMobster_WwiseProject/Effects/Factory Effects.wwu
+MonsterMobster_WwiseProject/Events/Default Work Unit.wwu
+MonsterMobster_WwiseProject/GeneratedSoundBanks/Mac/Init.bnk
+MonsterMobster_WwiseProject/GeneratedSoundBanks/Mac/Main.bnk
+MonsterMobster_WwiseProject/GeneratedSoundBanks/Mac/Main.txt
+MonsterMobster_WwiseProject/GeneratedSoundBanks/Mac/PluginInfo.xml
+MonsterMobster_WwiseProject/GeneratedSoundBanks/Mac/SoundbanksInfo.xml
+MonsterMobster_WwiseProject/GeneratedSoundBanks/Windows/Init.bnk
+MonsterMobster_WwiseProject/GeneratedSoundBanks/Windows/Main.bnk
+MonsterMobster_WwiseProject/GeneratedSoundBanks/Windows/Main.txt
+MonsterMobster_WwiseProject/GeneratedSoundBanks/Windows/PluginInfo.xml
+MonsterMobster_WwiseProject/GeneratedSoundBanks/Windows/SoundbanksInfo.xml
+MonsterMobster_WwiseProject/MonsterMobster_WwiseProject.wproj
+MonsterMobster_WwiseProject/SoundBanks/Default Work Unit.wwu

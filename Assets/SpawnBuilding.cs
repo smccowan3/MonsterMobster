@@ -29,9 +29,21 @@ public class SpawnBuilding : MonoBehaviour
 
     public void spawnBuilding()
     {
-        GameObject bldg = Instantiate(building, Input.mousePosition, new Quaternion (0,0,0,0));
-        FindAnyObjectByType<UIManager>().closeThis();
-        GameObject.Find("ClickableObjectManager").GetComponent<ClickableObjectManager>().moveDragObject(bldg);
+        bool buildable = FindAnyObjectByType<WoodManager>().CheckIfWoodSufficient(building.GetComponent<Building>().buildingCost);
+        if (buildable)
+        {
+            FindAnyObjectByType<WoodManager>().AddSubtractWood(-building.GetComponent<Building>().buildingCost);
+            FindAnyObjectByType<ShelterManage>().AddSubtractShelter(building.GetComponent<Building>().shelterSupplied);
+            GameObject bldg = Instantiate(building, Input.mousePosition, new Quaternion(0, 180, 0, 0));
+            FindAnyObjectByType<UIManager>().closeThis();
+            GameObject.Find("ClickableObjectManager").GetComponent<ClickableObjectManager>().moveDragObject(bldg);
+        }
+        else
+        {
+            FindAnyObjectByType<WoodManager>().DisplayErrorUI(building.GetComponent<Building>().buildingCost);
+        }
+
+        
     }
 
     
