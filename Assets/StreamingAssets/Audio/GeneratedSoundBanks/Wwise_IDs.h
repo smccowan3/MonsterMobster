@@ -34,6 +34,11 @@ namespace AK
         static const AkUniqueID UICLICK_02 = 2312763874U;
     } // namespace EVENTS
 
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID MASTER_LEVEL = 4245676100U;
+    } // namespace GAME_PARAMETERS
+
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;

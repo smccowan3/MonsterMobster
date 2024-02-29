@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{8A3BDEB4-AA97-4368-868A-185E437FF911}" SchemaVersion="119">
 	<Effects>
-		<WorkUnit Name="Default Work Unit" ID="{8A3BDEB4-AA97-4368-868A-185E437FF911}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{8A3BDEB4-AA97-4368-868A-185E437FF911}" PersistMode="Standalone">
+			<ChildrenList>
+				<Effect Name="Master_Meter" ID="{758E6919-9E41-4E5E-9487-50FDBEFE5671}" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+					<PropertyList>
+						<Property Name="Min" Type="Real32" Value="-96.3"/>
+					</PropertyList>
+					<PluginData>
+	<GameParameter Name="Master_Level" ID="{82A0B97F-2EB0-4074-9D76-A290269E1B97}"/>
+</PluginData>
+				</Effect>
+			</ChildrenList>
+		</WorkUnit>
 	</Effects>
 </WwiseDocument>

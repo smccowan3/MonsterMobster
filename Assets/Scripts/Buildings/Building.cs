@@ -96,8 +96,8 @@ public class Building : MonoBehaviour
         Quaternion currentRotation = transform.rotation;
 
         Vector3 newPos = currentPos + transform.forward*5;
-        Instantiate(spawnObject, newPos, currentRotation);
-        
+        GameObject spawned = Instantiate(spawnObject, newPos, currentRotation);
+        spawned.GetComponent<MonsterUnit>().OnSpawnNoise();
 
         currentlySpawning = false;
         //trainUI.GetComponent<Image>().color = Color.red;

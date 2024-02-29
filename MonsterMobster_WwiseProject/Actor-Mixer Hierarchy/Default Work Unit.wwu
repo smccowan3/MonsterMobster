@@ -4,7 +4,18 @@
 		<WorkUnit Name="Default Work Unit" ID="{A3B01B5F-C3D2-42B4-AD35-908B43EBC05D}" PersistMode="Standalone">
 			<ChildrenList>
 				<Sound Name="WoodHitQuick_FS10-87_01" ID="{F4A1445B-93CD-4963-A97F-4A0A65793871}" ShortID="26279430">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-13</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Attenuation(NLPF)" ID="{E003BD38-3198-4201-BC10-A8C63F38F1FF}" WorkUnitID="{58E08EBF-2577-4FEB-ADA2-001576124404}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5B5D076A-60ED-4DB2-91F7-E72857B54E70}"/>
 						</Reference>
@@ -27,10 +38,1120 @@
 							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
+					<PositioningInfo>
+						<Panner Name="" ID="{6E8D298A-FEF6-492E-B2C2-FE030CE8391D}"/>
+					</PositioningInfo>
+					<ObjectLists>
+						<ObjectList Name="Effects">
+							<Reference>
+								<Local>
+									<EffectSlot Name="" ID="{261C0F06-58C7-4B81-ACF0-1FD4E58DD4A3}" ShortID="151039903">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+												<ObjectRef Name="Small_Wooden_Room1" ID="{F7CBE859-36A8-4174-B553-AE32A7FE95FA}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
 					<ActiveSourceList>
 						<ActiveSource Name="WoodHitQuick_FS10-87_01" ID="{43EA03C7-3664-49B6-A1F9-7732CAAB71F6}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Sound Name="WoodHitSmall_FS10-94_04" ID="{AC6E4293-CF7A-48A3-82C8-572FE25A0542}" ShortID="359295000">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-415</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-19</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Attenuation(NLPF)" ID="{E003BD38-3198-4201-BC10-A8C63F38F1FF}" WorkUnitID="{58E08EBF-2577-4FEB-ADA2-001576124404}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5B5D076A-60ED-4DB2-91F7-E72857B54E70}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D030C27B-5E1A-4719-AFC4-4F04F07B698C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="WoodHitSmall_FS10-94_04" ID="{8EC710C6-6AF4-403B-966C-5972ECC9D688}">
+							<Language>SFX</Language>
+							<AudioFile>WoodHitSmall_FS10-94.04.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="449511603"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Effects">
+							<Reference>
+								<Local>
+									<EffectSlot Name="" ID="{74315F22-B943-4E54-AB0F-26C3D77A5904}" ShortID="147601458">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+												<ObjectRef Name="Small_Wooden_Room1" ID="{F7CBE859-36A8-4174-B553-AE32A7FE95FA}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+					<ActiveSourceList>
+						<ActiveSource Name="WoodHitSmall_FS10-94_04" ID="{8EC710C6-6AF4-403B-966C-5972ECC9D688}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="WoodHitSmall_FS10-94_01" ID="{65458232-5D8D-42C8-A6E4-97401D1EDF78}" ShortID="263755753">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-22</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Attenuation(NLPF)" ID="{E003BD38-3198-4201-BC10-A8C63F38F1FF}" WorkUnitID="{58E08EBF-2577-4FEB-ADA2-001576124404}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5B5D076A-60ED-4DB2-91F7-E72857B54E70}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D030C27B-5E1A-4719-AFC4-4F04F07B698C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="WoodHitSmall_FS10-94_04" ID="{4F0EE684-7FED-4BB3-B5AE-E3E17AC72573}">
+							<Language>SFX</Language>
+							<AudioFile>WoodHitSmall_FS10-94.04.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="449511603"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Effects">
+							<Reference>
+								<Local>
+									<EffectSlot Name="" ID="{DBA42EC1-B9F1-45E1-8B21-7D786DCFDF8D}" ShortID="910227384">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+												<ObjectRef Name="Small_Wooden_Room1" ID="{F7CBE859-36A8-4174-B553-AE32A7FE95FA}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+					<ActiveSourceList>
+						<ActiveSource Name="WoodHitSmall_FS10-94_04" ID="{4F0EE684-7FED-4BB3-B5AE-E3E17AC72573}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="WoodHitQuick_FS10-87_02" ID="{981C3C33-C6C5-48C0-B88A-9EF8A3E922E7}" ShortID="77756807">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-575</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-12</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Attenuation(NLPF)" ID="{E003BD38-3198-4201-BC10-A8C63F38F1FF}" WorkUnitID="{58E08EBF-2577-4FEB-ADA2-001576124404}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5B5D076A-60ED-4DB2-91F7-E72857B54E70}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D030C27B-5E1A-4719-AFC4-4F04F07B698C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="WoodHitQuick_FS10-87_01" ID="{62E275B8-6EE1-45CB-BF4C-B2556A208F63}">
+							<PropertyList>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.0904514721919302"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="0.0189836423118866"/>
+								<Property Name="TrimEnd" Type="Real64" Value="0.269121046892039"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>WoodHitQuick_FS10-87.01.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="190858653"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<PositioningInfo>
+						<Panner Name="" ID="{F09B01DA-37A2-4052-934A-F87741A70A31}"/>
+					</PositioningInfo>
+					<ObjectLists>
+						<ObjectList Name="Effects">
+							<Reference>
+								<Local>
+									<EffectSlot Name="" ID="{A5B5BDEB-9067-4029-BB18-A610D0BFA4C7}" ShortID="182912638">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+												<ObjectRef Name="Small_Wooden_Room1" ID="{F7CBE859-36A8-4174-B553-AE32A7FE95FA}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+					<ActiveSourceList>
+						<ActiveSource Name="WoodHitQuick_FS10-87_01" ID="{62E275B8-6EE1-45CB-BF4C-B2556A208F63}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="1-49 Break, Wood" ID="{CA449B87-8E34-4647-9FFA-C3CF20DE2318}" ShortID="645473839">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-14</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5B5D076A-60ED-4DB2-91F7-E72857B54E70}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D030C27B-5E1A-4719-AFC4-4F04F07B698C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="1-49 Break, Wood" ID="{4D31228B-8C36-405D-939F-8153021231E1}">
+							<Language>SFX</Language>
+							<AudioFile>1-49 Break, Wood.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="917511527"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="1-49 Break, Wood" ID="{4D31228B-8C36-405D-939F-8153021231E1}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="BodyHitsImpacts-BodyIntoJos" ID="{2B2DCF95-BF67-458D-A010-2AD95C18C17A}" ShortID="788745266">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-8</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Attenuation" ID="{E773C64F-6361-419A-883E-80D80C354564}" WorkUnitID="{58E08EBF-2577-4FEB-ADA2-001576124404}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5B5D076A-60ED-4DB2-91F7-E72857B54E70}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D030C27B-5E1A-4719-AFC4-4F04F07B698C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="BodyHitsImpacts-BodyIntoJos" ID="{F77A20B4-E838-4AE2-958D-3762FE6BA413}">
+							<PropertyList>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.291977929243752"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="0.401469652710159"/>
+								<Property Name="TrimEnd" Type="Real64" Value="1.0584199935086"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>BodyHitsImpacts-BodyIntoJos.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="360219768"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<PositioningInfo>
+						<Panner Name="" ID="{EAEE6F97-C7F7-455B-A46A-EA6ADA898AA2}"/>
+						<Position Name="" ID="{4B1B90C9-91E1-418C-9ABB-1F474D6FC893}"/>
+					</PositioningInfo>
+					<ActiveSourceList>
+						<ActiveSource Name="BodyHitsImpacts-BodyIntoJos" ID="{F77A20B4-E838-4AE2-958D-3762FE6BA413}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="BodyHitsImpacts-BodyIntoJos_01" ID="{CDCCE915-502F-4D97-89CF-ABEE174C3CE6}" ShortID="91441733">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-13</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Attenuation" ID="{E773C64F-6361-419A-883E-80D80C354564}" WorkUnitID="{58E08EBF-2577-4FEB-ADA2-001576124404}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5B5D076A-60ED-4DB2-91F7-E72857B54E70}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D030C27B-5E1A-4719-AFC4-4F04F07B698C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="BodyHitsImpacts-BodyIntoJos" ID="{2F19BF77-2D04-4B68-AB09-F4018BF60989}">
+							<PropertyList>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.291977929243752"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="3.04751963648166"/>
+								<Property Name="TrimEnd" Type="Real64" Value="3.63147549496917"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>BodyHitsImpacts-BodyIntoJos.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="107702001"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="BodyHitsImpacts-BodyIntoJos" ID="{2F19BF77-2D04-4B68-AB09-F4018BF60989}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="BodyHitsImpacts-BodyIntoJos_02" ID="{0BEF45D3-C995-4B17-AF18-16057D1691D8}" ShortID="930231886">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-12</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Attenuation" ID="{E773C64F-6361-419A-883E-80D80C354564}" WorkUnitID="{58E08EBF-2577-4FEB-ADA2-001576124404}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5B5D076A-60ED-4DB2-91F7-E72857B54E70}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D030C27B-5E1A-4719-AFC4-4F04F07B698C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="BodyHitsImpacts-BodyIntoJos" ID="{53E725B7-B2BE-4731-8EBC-18D647BFF061}">
+							<PropertyList>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.291977929243752"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="7.20820512820513"/>
+								<Property Name="TrimEnd" Type="Real64" Value="8.55860305095747"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>BodyHitsImpacts-BodyIntoJos.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="722562023"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="BodyHitsImpacts-BodyIntoJos" ID="{53E725B7-B2BE-4731-8EBC-18D647BFF061}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="BodyHitsImpacts-BodyIntoJos_03" ID="{A1402038-066E-4D67-B672-EC3E4FF90C7A}" ShortID="761767054">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-14</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Attenuation" ID="{E773C64F-6361-419A-883E-80D80C354564}" WorkUnitID="{58E08EBF-2577-4FEB-ADA2-001576124404}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5B5D076A-60ED-4DB2-91F7-E72857B54E70}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D030C27B-5E1A-4719-AFC4-4F04F07B698C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="BodyHitsImpacts-BodyIntoJos" ID="{0010F508-B02A-4A66-9F80-8B93C28E4318}">
+							<PropertyList>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.291977929243752"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="10.1827302823759"/>
+								<Property Name="TrimEnd" Type="Real64" Value="11.5148795845505"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>BodyHitsImpacts-BodyIntoJos.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="161120219"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="BodyHitsImpacts-BodyIntoJos" ID="{0010F508-B02A-4A66-9F80-8B93C28E4318}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="BodyHitsImpacts-BodyIntoJos_04" ID="{287006AE-8E38-4B86-9B43-A6083DD34775}" ShortID="210963967">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-12</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Attenuation" ID="{E773C64F-6361-419A-883E-80D80C354564}" WorkUnitID="{58E08EBF-2577-4FEB-ADA2-001576124404}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5B5D076A-60ED-4DB2-91F7-E72857B54E70}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D030C27B-5E1A-4719-AFC4-4F04F07B698C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="BodyHitsImpacts-BodyIntoJos" ID="{8E6F54CE-5809-4A7E-B83B-09113F3396B4}">
+							<PropertyList>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.291977929243752"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="12.8287802661474"/>
+								<Property Name="TrimEnd" Type="Real64" Value="13.4857306069458"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>BodyHitsImpacts-BodyIntoJos.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="153465760"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="BodyHitsImpacts-BodyIntoJos" ID="{8E6F54CE-5809-4A7E-B83B-09113F3396B4}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="BodyHitsImpacts-BodyIntoJos_05" ID="{31904AAD-453F-41D4-BE2D-42A2F1E29F76}" ShortID="899154947">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-9</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Attenuation" ID="{E773C64F-6361-419A-883E-80D80C354564}" WorkUnitID="{58E08EBF-2577-4FEB-ADA2-001576124404}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5B5D076A-60ED-4DB2-91F7-E72857B54E70}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D030C27B-5E1A-4719-AFC4-4F04F07B698C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="BodyHitsImpacts-BodyIntoJos" ID="{3C22608F-56AD-45CB-9410-8B3984643C06}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.131569683125431"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.287002825169735"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="15.7485595585849"/>
+								<Property Name="TrimEnd" Type="Real64" Value="16.0355623837546"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>BodyHitsImpacts-BodyIntoJos.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="828436038"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="BodyHitsImpacts-BodyIntoJos" ID="{3C22608F-56AD-45CB-9410-8B3984643C06}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="LIQSuct_IMPACT-Slime Suctio" ID="{07488916-448A-4494-9A59-86E06EB9026B}" ShortID="805160681">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-2</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Attenuation" ID="{E773C64F-6361-419A-883E-80D80C354564}" WorkUnitID="{58E08EBF-2577-4FEB-ADA2-001576124404}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5B5D076A-60ED-4DB2-91F7-E72857B54E70}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D030C27B-5E1A-4719-AFC4-4F04F07B698C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="LIQSuct_IMPACT-Slime Suctio" ID="{5074C871-E0F5-46E4-BFBE-7E0E3F134195}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.0103788542680948"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.114167396949043"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="0.124546251217137"/>
+								<Property Name="TrimEnd" Type="Real64" Value="0.674625527426165"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>LIQSuct_IMPACT-Slime Suctio.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="1056416234"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="LIQSuct_IMPACT-Slime Suctio" ID="{5074C871-E0F5-46E4-BFBE-7E0E3F134195}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="ESM_Cool_UI_Button_10_Game_Click_Switch_UI_Classic" ID="{4C469511-8BC3-441A-AFB0-77ABD040420F}" ShortID="508744243">
+					<PropertyList>
+						<Property Name="CenterPercentage" Type="int32">
+							<ValueList>
+								<Value>50</Value>
+							</ValueList>
+						</Property>
+						<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+						<Property Name="LoudnessNormalizationTarget" Type="Real64" Value="-30"/>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>40</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-1000</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5B5D076A-60ED-4DB2-91F7-E72857B54E70}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D030C27B-5E1A-4719-AFC4-4F04F07B698C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="ESM_Cool_UI_Button_10_Game_Click_Switch_UI_Classic" ID="{E69F994C-B42E-4461-8256-91CB58031DE2}">
+							<PropertyList>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="0.00670979230137863"/>
+								<Property Name="TrimEnd" Type="Real64" Value="0.0670979230137862"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>ESM_Cool_UI_Button_10_Game_Click_Switch_UI_Classic.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="280489079"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Effects">
+							<Reference>
+								<Local>
+									<EffectSlot Name="" ID="{5BB9354D-FED2-45E9-B471-1947883CB6BE}" ShortID="848436139">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+												<ObjectRef Name="Small_Wooden_Room1" ID="{F7CBE859-36A8-4174-B553-AE32A7FE95FA}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+					<ActiveSourceList>
+						<ActiveSource Name="ESM_Cool_UI_Button_10_Game_Click_Switch_UI_Classic" ID="{E69F994C-B42E-4461-8256-91CB58031DE2}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="ESM_Cool_UI_Button_10_Game_Click_Switch_UI_Classic_01" ID="{F2681786-0137-4106-860C-CF1D494B715C}" ShortID="952933949">
+					<PropertyList>
+						<Property Name="CenterPercentage" Type="int32">
+							<ValueList>
+								<Value>50</Value>
+							</ValueList>
+						</Property>
+						<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+						<Property Name="LoudnessNormalizationTarget" Type="Real64" Value="-30"/>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>40</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-400</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5B5D076A-60ED-4DB2-91F7-E72857B54E70}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D030C27B-5E1A-4719-AFC4-4F04F07B698C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="ESM_Cool_UI_Button_10_Game_Click_Switch_UI_Classic" ID="{D2805101-7F08-4C60-9EDD-30148465F146}">
+							<PropertyList>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="0.00670979230137863"/>
+								<Property Name="TrimEnd" Type="Real64" Value="0.0670979230137862"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>ESM_Cool_UI_Button_10_Game_Click_Switch_UI_Classic.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="280489079"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Effects">
+							<Reference>
+								<Local>
+									<EffectSlot Name="" ID="{29961AFB-4A4F-4126-B474-5EF8782ED1DF}" ShortID="871253427">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+												<ObjectRef Name="Small_Wooden_Room1" ID="{F7CBE859-36A8-4174-B553-AE32A7FE95FA}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+					<ActiveSourceList>
+						<ActiveSource Name="ESM_Cool_UI_Button_10_Game_Click_Switch_UI_Classic" ID="{D2805101-7F08-4C60-9EDD-30148465F146}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="ESM_Cool_UI_Button_10_Game_Click_Switch_UI_Classic_02" ID="{0371055A-4D9C-4F29-A906-3ADD06A29B72}" ShortID="66433585">
+					<PropertyList>
+						<Property Name="CenterPercentage" Type="int32">
+							<ValueList>
+								<Value>50</Value>
+							</ValueList>
+						</Property>
+						<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+						<Property Name="LoudnessNormalizationTarget" Type="Real64" Value="-30"/>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>40</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-700</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5B5D076A-60ED-4DB2-91F7-E72857B54E70}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D030C27B-5E1A-4719-AFC4-4F04F07B698C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="ESM_Cool_UI_Button_10_Game_Click_Switch_UI_Classic" ID="{1261455B-8D79-498A-9583-414C19F223F7}">
+							<PropertyList>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="0.00670979230137863"/>
+								<Property Name="TrimEnd" Type="Real64" Value="0.0670979230137862"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>ESM_Cool_UI_Button_10_Game_Click_Switch_UI_Classic.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="280489079"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Effects">
+							<Reference>
+								<Local>
+									<EffectSlot Name="" ID="{775D7C1F-DBAB-4636-B4D6-62908A9E81CD}" ShortID="523512110">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+												<ObjectRef Name="Small_Wooden_Room1" ID="{F7CBE859-36A8-4174-B553-AE32A7FE95FA}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+					<ActiveSourceList>
+						<ActiveSource Name="ESM_Cool_UI_Button_10_Game_Click_Switch_UI_Classic" ID="{1261455B-8D79-498A-9583-414C19F223F7}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="ESM_MG3_fx_foley_interactions_digital_pop_potion_liquid_01" ID="{5857F455-BFB2-4FF3-B776-35406608692A}" ShortID="312340461">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="OutputBusHighpass" Type="int16">
+							<ValueList>
+								<Value>39</Value>
+							</ValueList>
+						</Property>
+						<Property Name="OutputBusLowpass" Type="int16">
+							<ValueList>
+								<Value>32</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>330</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Attenuation" ID="{E773C64F-6361-419A-883E-80D80C354564}" WorkUnitID="{58E08EBF-2577-4FEB-ADA2-001576124404}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5B5D076A-60ED-4DB2-91F7-E72857B54E70}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D030C27B-5E1A-4719-AFC4-4F04F07B698C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="ESM_MG3_fx_foley_interactions_digital_pop_potion_liquid_01" ID="{FE7F4079-5688-494E-B2AA-D76D4E9C6981}">
+							<Language>SFX</Language>
+							<AudioFile>ESM_MG3_fx_foley_interactions_digital_pop_potion_liquid_01.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="48389856"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="ESM_MG3_fx_foley_interactions_digital_pop_potion_liquid_01" ID="{FE7F4079-5688-494E-B2AA-D76D4E9C6981}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="ESM_MG3_fx_science_fiction_alien_gibberish_09" ID="{314FB614-218A-4DDE-8D64-2FE03174DA52}" ShortID="848372041">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="OutputBusHighpass" Type="int16">
+							<ValueList>
+								<Value>42</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-380</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Attenuation" ID="{E773C64F-6361-419A-883E-80D80C354564}" WorkUnitID="{58E08EBF-2577-4FEB-ADA2-001576124404}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5B5D076A-60ED-4DB2-91F7-E72857B54E70}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D030C27B-5E1A-4719-AFC4-4F04F07B698C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="ESM_MG3_fx_science_fiction_alien_gibberish_09" ID="{C38E1C9C-D3CC-4B01-ADA5-DE0B6F4A7DCD}">
+							<Language>SFX</Language>
+							<AudioFile>ESM_MG3_fx_science_fiction_alien_gibberish_09.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="430201428"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="ESM_MG3_fx_science_fiction_alien_gibberish_09" ID="{C38E1C9C-D3CC-4B01-ADA5-DE0B6F4A7DCD}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<RandomSequenceContainer Name="SlimeOnClick" ID="{8C70518F-05B6-4FA4-8CAE-6F42BC3E0167}" ShortID="1059242333">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Attenuation" ID="{E773C64F-6361-419A-883E-80D80C354564}" WorkUnitID="{58E08EBF-2577-4FEB-ADA2-001576124404}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5B5D076A-60ED-4DB2-91F7-E72857B54E70}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D030C27B-5E1A-4719-AFC4-4F04F07B698C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="ESM_MG3_fx_science_fiction_alien_gibberish_01" ID="{2E74DDCD-A476-47D5-9912-E41E00F2AAFC}" ShortID="438146074">
+							<PropertyList>
+								<Property Name="OutputBusHighpass" Type="int16">
+									<ValueList>
+										<Value>40</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-300</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5B5D076A-60ED-4DB2-91F7-E72857B54E70}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D030C27B-5E1A-4719-AFC4-4F04F07B698C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ESM_MG3_fx_science_fiction_alien_gibberish_01" ID="{EC4B1F5E-F630-4DD9-B6EA-658A3D6C6469}">
+									<Language>SFX</Language>
+									<AudioFile>ESM_MG3_fx_science_fiction_alien_gibberish_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="898831058"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ESM_MG3_fx_science_fiction_alien_gibberish_01" ID="{EC4B1F5E-F630-4DD9-B6EA-658A3D6C6469}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ESM_MG3_fx_science_fiction_alien_gibberish_03" ID="{78D4E2FB-DE48-48F6-9AD4-7C7EBB776684}" ShortID="935503186">
+							<PropertyList>
+								<Property Name="OutputBusHighpass" Type="int16">
+									<ValueList>
+										<Value>39</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-230</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5B5D076A-60ED-4DB2-91F7-E72857B54E70}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D030C27B-5E1A-4719-AFC4-4F04F07B698C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ESM_MG3_fx_science_fiction_alien_gibberish_03" ID="{5982C6B9-575C-4A20-92CF-BAE4940C26E0}">
+									<Language>SFX</Language>
+									<AudioFile>ESM_MG3_fx_science_fiction_alien_gibberish_03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="790378538"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ESM_MG3_fx_science_fiction_alien_gibberish_03" ID="{5982C6B9-575C-4A20-92CF-BAE4940C26E0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ESM_MG3_fx_science_fiction_alien_gibberish_02" ID="{8CDA38E3-9F57-49B2-9C84-FB5D138717A2}" ShortID="388426986">
+							<PropertyList>
+								<Property Name="OutputBusHighpass" Type="int16">
+									<ValueList>
+										<Value>40</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-300</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5B5D076A-60ED-4DB2-91F7-E72857B54E70}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D030C27B-5E1A-4719-AFC4-4F04F07B698C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ESM_MG3_fx_science_fiction_alien_gibberish_02" ID="{D31A91EB-B6A8-4EBE-9E74-6717C7169C26}">
+									<Language>SFX</Language>
+									<AudioFile>ESM_MG3_fx_science_fiction_alien_gibberish_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="337509303"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ESM_MG3_fx_science_fiction_alien_gibberish_02" ID="{D31A91EB-B6A8-4EBE-9E74-6717C7169C26}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ESM_MG3_fx_science_fiction_alien_gibberish_05" ID="{D5D4B1FA-3CA0-466F-B0DA-AFA4288D424C}" ShortID="334211733">
+							<PropertyList>
+								<Property Name="OutputBusHighpass" Type="int16">
+									<ValueList>
+										<Value>39</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-300</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5B5D076A-60ED-4DB2-91F7-E72857B54E70}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D030C27B-5E1A-4719-AFC4-4F04F07B698C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ESM_MG3_fx_science_fiction_alien_gibberish_05" ID="{C4132BE8-67BF-432E-B5AC-92C7C348AB31}">
+									<Language>SFX</Language>
+									<AudioFile>ESM_MG3_fx_science_fiction_alien_gibberish_05.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="783206219"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ESM_MG3_fx_science_fiction_alien_gibberish_05" ID="{C4132BE8-67BF-432E-B5AC-92C7C348AB31}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ESM_MG3_fx_science_fiction_alien_gibberish_06" ID="{C8FB9EE4-D286-4C3C-93B6-B542B0CE28D3}" ShortID="54983332">
+							<PropertyList>
+								<Property Name="OutputBusHighpass" Type="int16">
+									<ValueList>
+										<Value>40</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-300</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5B5D076A-60ED-4DB2-91F7-E72857B54E70}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D030C27B-5E1A-4719-AFC4-4F04F07B698C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ESM_MG3_fx_science_fiction_alien_gibberish_06" ID="{1F58AF2A-50AE-4E86-A561-986F5AFDAB6E}">
+									<Language>SFX</Language>
+									<AudioFile>ESM_MG3_fx_science_fiction_alien_gibberish_06.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1023083781"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ESM_MG3_fx_science_fiction_alien_gibberish_06" ID="{1F58AF2A-50AE-4E86-A561-986F5AFDAB6E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ESM_MG3_fx_science_fiction_alien_gibberish_08" ID="{219BAF19-8674-4786-AEBA-EEA9BCC21A71}" ShortID="306412040">
+							<PropertyList>
+								<Property Name="OutputBusHighpass" Type="int16">
+									<ValueList>
+										<Value>36</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-350</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5B5D076A-60ED-4DB2-91F7-E72857B54E70}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D030C27B-5E1A-4719-AFC4-4F04F07B698C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ESM_MG3_fx_science_fiction_alien_gibberish_08" ID="{CE1354E1-7EAE-45FB-9EE1-0D29DF66CB69}">
+									<Language>SFX</Language>
+									<AudioFile>ESM_MG3_fx_science_fiction_alien_gibberish_08.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="239366555"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ESM_MG3_fx_science_fiction_alien_gibberish_08" ID="{CE1354E1-7EAE-45FB-9EE1-0D29DF66CB69}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="TreeHit" ID="{0513B7E0-E3EB-4329-8F2D-1A92EFC3C1F4}" ShortID="823018908">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Attenuation" ID="{E773C64F-6361-419A-883E-80D80C354564}" WorkUnitID="{58E08EBF-2577-4FEB-ADA2-001576124404}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5B5D076A-60ED-4DB2-91F7-E72857B54E70}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D030C27B-5E1A-4719-AFC4-4F04F07B698C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="FS10_76_06_SmallWoodBreak_W" ID="{8DBC9E2D-3B39-46B4-86EF-6B4AE256FD81}" ShortID="72386244">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-15</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5B5D076A-60ED-4DB2-91F7-E72857B54E70}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D030C27B-5E1A-4719-AFC4-4F04F07B698C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FS10_76_06_SmallWoodBreak_W" ID="{0F2BC7EF-FD07-404C-AAF4-DB1FD3552FA8}">
+									<Language>SFX</Language>
+									<AudioFile>FS10_76_06_SmallWoodBreak_W.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="574183791"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FS10_76_06_SmallWoodBreak_W" ID="{0F2BC7EF-FD07-404C-AAF4-DB1FD3552FA8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="FS10_86_02_Hard,BreakingWoo" ID="{003B513F-E2DD-431D-88AA-613D220F17F6}" ShortID="308968207">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-14</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5B5D076A-60ED-4DB2-91F7-E72857B54E70}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D030C27B-5E1A-4719-AFC4-4F04F07B698C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FS10_86_02_Hard,BreakingWoo" ID="{7127A828-8EE5-4ADA-8EEA-D5F3EFDB8B89}">
+									<Language>SFX</Language>
+									<AudioFile>FS10_86_02_Hard,BreakingWoo.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="395632469"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FS10_86_02_Hard,BreakingWoo" ID="{7127A828-8EE5-4ADA-8EEA-D5F3EFDB8B89}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="FS10_77_04_WoodBreakAndSpli" ID="{CC465DA7-A896-41FE-B1BE-4913F68BE777}" ShortID="825216070">
+							<PropertyList>
+								<Property Name="OutputBusHighpass" Type="int16">
+									<ValueList>
+										<Value>19</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-19</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5B5D076A-60ED-4DB2-91F7-E72857B54E70}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D030C27B-5E1A-4719-AFC4-4F04F07B698C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FS10_77_04_WoodBreakAndSpli" ID="{13A9E56F-7625-48BE-BA63-A5AB64C57B53}">
+									<Language>SFX</Language>
+									<AudioFile>FS10_77_04_WoodBreakAndSpli.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="424552928"/>
+									</MediaIDList>
+								</AudioFileSource>
+								<AudioFileSource Name="FS10_74_05_Big,FastWoodBrea" ID="{358B2019-37C0-42A7-9A80-072A4F2824F4}">
+									<Language>SFX</Language>
+									<AudioFile>FS10_74_05_Big,FastWoodBrea.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="730044249"/>
+									</MediaIDList>
+								</AudioFileSource>
+								<AudioFileSource Name="FS10_77_02_Hard,IntenseWood" ID="{7BE6F4E5-28C4-42A1-8F85-94141B4B03E5}">
+									<Language>SFX</Language>
+									<AudioFile>FS10_77_02_Hard,IntenseWood.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="122804562"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FS10_77_02_Hard,IntenseWood" ID="{7BE6F4E5-28C4-42A1-8F85-94141B4B03E5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

@@ -8,7 +8,219 @@
 						<Action Name="" ID="{DD4880BB-E2D2-4D8B-9AAC-A70E58E82046}" ShortID="945902058">
 							<ReferenceList>
 								<Reference Name="Target">
+									<ObjectRef Name="WoodHitQuick_FS10-87_02" ID="{981C3C33-C6C5-48C0-B88A-9EF8A3E922E7}" WorkUnitID="{A3B01B5F-C3D2-42B4-AD35-908B43EBC05D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="BuildingPlacement2" ID="{74AB5CC3-5109-459F-9445-44D240ABACC0}">
+					<ChildrenList>
+						<Action Name="" ID="{DF14A6B1-AC48-449F-B0A3-8C53B1299E7F}" ShortID="99714363">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WoodHitSmall_FS10-94_04" ID="{AC6E4293-CF7A-48A3-82C8-572FE25A0542}" WorkUnitID="{A3B01B5F-C3D2-42B4-AD35-908B43EBC05D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="BuildingPlacement_01" ID="{A784D2ED-C543-4522-871C-0879D7FD2D12}">
+					<ChildrenList>
+						<Action Name="" ID="{654F2A6F-FF18-475B-BCB2-8ECF66C337C9}" ShortID="755960173">
+							<ReferenceList>
+								<Reference Name="Target">
 									<ObjectRef Name="WoodHitQuick_FS10-87_01" ID="{F4A1445B-93CD-4963-A97F-4A0A65793871}" WorkUnitID="{A3B01B5F-C3D2-42B4-AD35-908B43EBC05D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="BuildingPlacement2_01" ID="{D156C95D-9D11-4647-8A06-72682E8FFFD1}">
+					<ChildrenList>
+						<Action Name="" ID="{5E34BA51-1E13-47B3-9AE0-B57DDD7E9BBC}" ShortID="713643265">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WoodHitSmall_FS10-94_01" ID="{65458232-5D8D-42C8-A6E4-97401D1EDF78}" WorkUnitID="{A3B01B5F-C3D2-42B4-AD35-908B43EBC05D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SlimeHeadHit" ID="{B5C089D0-022E-420A-A85A-6936F5E99B00}">
+					<ChildrenList>
+						<Action Name="" ID="{34268680-842D-4E9C-9792-61BD9827A13A}" ShortID="861390660">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BodyHitsImpacts-BodyIntoJos" ID="{2B2DCF95-BF67-458D-A010-2AD95C18C17A}" WorkUnitID="{A3B01B5F-C3D2-42B4-AD35-908B43EBC05D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SlimeHeadHit_01" ID="{38D1C107-FE05-4457-9500-253563584890}">
+					<ChildrenList>
+						<Action Name="" ID="{3A2EC59A-9D10-43EC-A604-E6A94E03D599}" ShortID="899964654">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BodyHitsImpacts-BodyIntoJos_01" ID="{CDCCE915-502F-4D97-89CF-ABEE174C3CE6}" WorkUnitID="{A3B01B5F-C3D2-42B4-AD35-908B43EBC05D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SlimeHeadHit_02" ID="{0C36FA1C-CFCC-427B-B229-EBFE4ADA59FF}">
+					<ChildrenList>
+						<Action Name="" ID="{98206516-7943-4383-9D17-32F74C27C7DD}" ShortID="80090994">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BodyHitsImpacts-BodyIntoJos_02" ID="{0BEF45D3-C995-4B17-AF18-16057D1691D8}" WorkUnitID="{A3B01B5F-C3D2-42B4-AD35-908B43EBC05D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SlimeHeadHit_03" ID="{98342A1F-13B4-4CC5-8CDA-B9430D38434F}">
+					<ChildrenList>
+						<Action Name="" ID="{43416171-1771-4C31-96B5-115EF5815FAE}" ShortID="831217091">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BodyHitsImpacts-BodyIntoJos_03" ID="{A1402038-066E-4D67-B672-EC3E4FF90C7A}" WorkUnitID="{A3B01B5F-C3D2-42B4-AD35-908B43EBC05D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SlimeHeadHit_04" ID="{B9B92387-34E3-482B-AE7D-77A3E9AB19DE}">
+					<ChildrenList>
+						<Action Name="" ID="{AD8409BD-8FA1-4FA0-84FF-FA54D842C754}" ShortID="899028111">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BodyHitsImpacts-BodyIntoJos_04" ID="{287006AE-8E38-4B86-9B43-A6083DD34775}" WorkUnitID="{A3B01B5F-C3D2-42B4-AD35-908B43EBC05D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SlimeHeadHit_05" ID="{35DB0678-3250-49CB-B143-1955C80217BC}">
+					<ChildrenList>
+						<Action Name="" ID="{658092B4-23C4-44CD-B3B2-27EB11889736}" ShortID="331772597">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BodyHitsImpacts-BodyIntoJos_05" ID="{31904AAD-453F-41D4-BE2D-42A2F1E29F76}" WorkUnitID="{A3B01B5F-C3D2-42B4-AD35-908B43EBC05D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="PlayRainSounds" ID="{F0EB4113-6340-4BE6-9263-263629DED059}">
+					<ChildrenList>
+						<Action Name="" ID="{AA9E46D4-6CD7-4DA1-82B5-32574177D60A}" ShortID="701977784">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambience" ID="{7A29957E-4A49-46D7-9B7C-6D5634BDAA05}" WorkUnitID="{3098F40B-3B3E-4A5E-BBB9-06CE990474A9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SlimeSpawnSOund" ID="{BF1F8B7A-4102-486C-A135-3E9EA28C56C3}">
+					<ChildrenList>
+						<Action Name="" ID="{32F1C0C1-15BB-42EE-889E-0AAB728A70E3}" ShortID="142540232">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="LIQSuct_IMPACT-Slime Suctio" ID="{07488916-448A-4494-9A59-86E06EB9026B}" WorkUnitID="{A3B01B5F-C3D2-42B4-AD35-908B43EBC05D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{FFE6563C-FD27-4C46-A0E8-5770DD898920}" ShortID="836184810">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ESM_MG3_fx_science_fiction_alien_gibberish_06" ID="{C8FB9EE4-D286-4C3C-93B6-B542B0CE28D3}" WorkUnitID="{A3B01B5F-C3D2-42B4-AD35-908B43EBC05D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="UIClick" ID="{4A420598-382D-4669-8B58-4410A7D06ECB}">
+					<ChildrenList>
+						<Action Name="" ID="{8C9B0013-2BD4-4464-AD35-FA6EB311B203}" ShortID="476236500">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ESM_Cool_UI_Button_10_Game_Click_Switch_UI_Classic" ID="{4C469511-8BC3-441A-AFB0-77ABD040420F}" WorkUnitID="{A3B01B5F-C3D2-42B4-AD35-908B43EBC05D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="UIClick_01" ID="{4AF71215-FFF0-439E-9680-9349467FBA11}">
+					<ChildrenList>
+						<Action Name="" ID="{591A4413-7FD8-4841-A68B-70A11AE52E16}" ShortID="1020927239">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ESM_Cool_UI_Button_10_Game_Click_Switch_UI_Classic_01" ID="{F2681786-0137-4106-860C-CF1D494B715C}" WorkUnitID="{A3B01B5F-C3D2-42B4-AD35-908B43EBC05D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="UIClick_02" ID="{61AB929D-B6D1-430F-8B93-CB9B83B234CA}">
+					<ChildrenList>
+						<Action Name="" ID="{62837E6E-2CE6-4ABD-BF15-170E24DF3652}" ShortID="865840288">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ESM_Cool_UI_Button_10_Game_Click_Switch_UI_Classic_02" ID="{0371055A-4D9C-4F29-A906-3ADD06A29B72}" WorkUnitID="{A3B01B5F-C3D2-42B4-AD35-908B43EBC05D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="PlayMusic" ID="{2CE2A791-75B3-4DB4-A609-00EC1D44BCC7}">
+					<ChildrenList>
+						<Action Name="" ID="{E6550243-F00F-4815-BACD-E096C339527E}" ShortID="810933035">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AmbientMusic" ID="{4625BC38-34A5-4BFE-8DAF-A898DD9ED0AA}" WorkUnitID="{3098F40B-3B3E-4A5E-BBB9-06CE990474A9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="PlayHatNoise" ID="{E69E85CC-EBE8-40F2-84C6-6E5246B5AFB2}">
+					<ChildrenList>
+						<Action Name="" ID="{15CA5EF6-8FED-4028-A30A-7D7F6F3ACF13}" ShortID="250343394">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ESM_MG3_fx_foley_interactions_digital_pop_potion_liquid_01" ID="{5857F455-BFB2-4FF3-B776-35406608692A}" WorkUnitID="{A3B01B5F-C3D2-42B4-AD35-908B43EBC05D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5FACC415-C907-4B09-BDBB-B87183CA54DE}" ShortID="610919336">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ESM_MG3_fx_science_fiction_alien_gibberish_09" ID="{314FB614-218A-4DDE-8D64-2FE03174DA52}" WorkUnitID="{A3B01B5F-C3D2-42B4-AD35-908B43EBC05D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SlimeOnClick" ID="{1E5C4E2D-6FFE-427E-9EB3-F99FF3F507EA}">
+					<ChildrenList>
+						<Action Name="" ID="{B5D7FB0F-05CB-4337-B747-6E3DEB5713E7}" ShortID="202377665">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SlimeOnClick" ID="{8C70518F-05B6-4FA4-8CAE-6F42BC3E0167}" WorkUnitID="{A3B01B5F-C3D2-42B4-AD35-908B43EBC05D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="PlayTreeHit" ID="{44EB5331-A480-4CBF-98AB-24C75A5FAB7B}">
+					<ChildrenList>
+						<Action Name="" ID="{DDAB4B8E-74D2-4D2A-9855-858A62C3919E}" ShortID="461636128">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TreeHit" ID="{0513B7E0-E3EB-4329-8F2D-1A92EFC3C1F4}" WorkUnitID="{A3B01B5F-C3D2-42B4-AD35-908B43EBC05D}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

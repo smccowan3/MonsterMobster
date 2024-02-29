@@ -1,6 +1,54 @@
 Event	ID	Name			Wwise Object Path	Notes
+	124501000	SlimeHeadHit_03			\Default Work Unit\SlimeHeadHit_03	
+	124501001	SlimeHeadHit_02			\Default Work Unit\SlimeHeadHit_02	
+	124501002	SlimeHeadHit_01			\Default Work Unit\SlimeHeadHit_01	
+	124501006	SlimeHeadHit_05			\Default Work Unit\SlimeHeadHit_05	
+	124501007	SlimeHeadHit_04			\Default Work Unit\SlimeHeadHit_04	
+	417627684	PlayMusic			\Default Work Unit\PlayMusic	
+	1415332276	BuildingPlacement_01			\Default Work Unit\BuildingPlacement_01	
+	1842524950	BuildingPlacement2_01			\Default Work Unit\BuildingPlacement2_01	
+	2312763873	UIClick_01			\Default Work Unit\UIClick_01	
+	2312763874	UIClick_02			\Default Work Unit\UIClick_02	
+	2336583584	BuildingPlacement2			\Default Work Unit\BuildingPlacement2	
+	2391971545	PlayRainSounds			\Default Work Unit\PlayRainSounds	
+	2879679237	SlimeSpawnSOund			\Default Work Unit\SlimeSpawnSOund	
+	3106958816	SlimeOnClick			\Default Work Unit\SlimeOnClick	
+	3161158948	SlimeHeadHit			\Default Work Unit\SlimeHeadHit	
+	3164408517	UIClick			\Default Work Unit\UIClick	
+	3180268486	PlayTreeHit			\Default Work Unit\PlayTreeHit	
+	3504582140	PlayHatNoise			\Default Work Unit\PlayHatNoise	
 	4221916518	BuildingPlacement			\Default Work Unit\BuildingPlacement	
 
+Effect plug-ins	ID	Name	Type				Notes
+	702943128	Stereo Delay (Custom)	Wwise Stereo Delay			
+	1551236760	Small_Wooden_Room1	Wwise Matrix Reverb			
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	190858653	WoodHitQuick_FS10-87_01	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Windows\SFX\WoodHitQuick_FS10-87.01_E00E8FC2.wem		\Actor-Mixer Hierarchy\Default Work Unit\WoodHitQuick_FS10-87_01		48124
+	48389856	ESM_MG3_fx_foley_interactions_digital_pop_potion_liquid_01	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Windows\SFX\ESM_MG3_fx_foley_interactions_digital_pop_potion_liquid_01_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\ESM_MG3_fx_foley_interactions_digital_pop_potion_liquid_01		42396
+	99018219	Fate is Only Left to You	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Windows\SFX\Fate is Only Left to You_FBC78EF0.wem		\Interactive Music Hierarchy\Music\AmbientMusic\Fate is Only Left to You\Fate is Only Left to You		28707968
+	107702001	BodyHitsImpacts-BodyIntoJos_01	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Windows\SFX\BodyHitsImpacts-BodyIntoJos_34F4A658.wem		\Actor-Mixer Hierarchy\Default Work Unit\BodyHitsImpacts-BodyIntoJos_01		112216
+	122804562	FS10_77_04_WoodBreakAndSpli	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Windows\SFX\FS10_77_02_Hard,IntenseWood_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\TreeHit\FS10_77_04_WoodBreakAndSpli		254048
+	124421971	ForestLightRain_SEU02_18	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Windows\SFX\ForestLightRain_SEU02.18_FBC78EF0.wem		\Interactive Music Hierarchy\Music\Ambience\ForestLightRain_SEU02_18\ForestLightRain_SEU02_18		39188576
+	153465760	BodyHitsImpacts-BodyIntoJos_04	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Windows\SFX\BodyHitsImpacts-BodyIntoJos_A20203C8.wem		\Actor-Mixer Hierarchy\Default Work Unit\BodyHitsImpacts-BodyIntoJos_04		126232
+	161120219	BodyHitsImpacts-BodyIntoJos_03	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Windows\SFX\BodyHitsImpacts-BodyIntoJos_ACBC4D94.wem		\Actor-Mixer Hierarchy\Default Work Unit\BodyHitsImpacts-BodyIntoJos_03		255868
+	190858653	WoodHitQuick_FS10-87_02	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Windows\SFX\WoodHitQuick_FS10-87.01_55057509.wem		\Actor-Mixer Hierarchy\Default Work Unit\WoodHitQuick_FS10-87_02		48124
+	239366555	ESM_MG3_fx_science_fiction_alien_gibberish_08	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Windows\SFX\ESM_MG3_fx_science_fiction_alien_gibberish_08_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\SlimeOnClick\ESM_MG3_fx_science_fiction_alien_gibberish_08		317236
+	280489079	ESM_Cool_UI_Button_10_Game_Click_Switch_UI_Classic_02	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Windows\SFX\ESM_Cool_UI_Button_10_Game_Click_Switch_UI_Classic_A89BDC4A.wem		\Actor-Mixer Hierarchy\Default Work Unit\ESM_Cool_UI_Button_10_Game_Click_Switch_UI_Classic_02		10764
+	324868019	ForestAfterRain_BW_1752	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Windows\SFX\ForestAfterRain_BW.1752_FBC78EF0.wem		\Interactive Music Hierarchy\Music\Ambience\ForestAfterRain_BW_1752\ForestAfterRain_BW_1752		33054816
+	337509303	ESM_MG3_fx_science_fiction_alien_gibberish_02	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Windows\SFX\ESM_MG3_fx_science_fiction_alien_gibberish_02_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\SlimeOnClick\ESM_MG3_fx_science_fiction_alien_gibberish_02		227236
+	360219768	BodyHitsImpacts-BodyIntoJos	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Windows\SFX\BodyHitsImpacts-BodyIntoJos_A06FDA76.wem		\Actor-Mixer Hierarchy\Default Work Unit\BodyHitsImpacts-BodyIntoJos		126228
+	395632469	FS10_86_02_Hard,BreakingWoo	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Windows\SFX\FS10_86_02_Hard,BreakingWoo_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\TreeHit\FS10_86_02_Hard,BreakingWoo		233568
+	407274218	Believe in the Slime_2	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Windows\SFX\Believe in the Slime_2_FBC78EF0.wem		\Interactive Music Hierarchy\Music\AmbientMusic\Believe in the Slime_2\Believe in the Slime_2		37227648
+	430201428	ESM_MG3_fx_science_fiction_alien_gibberish_09	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Windows\SFX\ESM_MG3_fx_science_fiction_alien_gibberish_09_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\ESM_MG3_fx_science_fiction_alien_gibberish_09		178380
+	449511603	WoodHitSmall_FS10-94_04	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Windows\SFX\WoodHitSmall_FS10-94.04_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\WoodHitSmall_FS10-94_04		82016
+	475275108	Forest_S08AM_32	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Windows\SFX\Forest_S08AM.32_FBC78EF0.wem		\Interactive Music Hierarchy\Music\Ambience\Forest_S08AM_32\Forest_S08AM_32		28255328
+	574183791	FS10_76_06_SmallWoodBreak_W	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Windows\SFX\FS10_76_06_SmallWoodBreak_W_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\TreeHit\FS10_76_06_SmallWoodBreak_W		213088
+	722562023	BodyHitsImpacts-BodyIntoJos_02	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Windows\SFX\BodyHitsImpacts-BodyIntoJos_364C70C6.wem		\Actor-Mixer Hierarchy\Default Work Unit\BodyHitsImpacts-BodyIntoJos_02		259372
+	783206219	ESM_MG3_fx_science_fiction_alien_gibberish_05	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Windows\SFX\ESM_MG3_fx_science_fiction_alien_gibberish_05_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\SlimeOnClick\ESM_MG3_fx_science_fiction_alien_gibberish_05		338668
+	790378538	ESM_MG3_fx_science_fiction_alien_gibberish_03	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Windows\SFX\ESM_MG3_fx_science_fiction_alien_gibberish_03_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\SlimeOnClick\ESM_MG3_fx_science_fiction_alien_gibberish_03		286380
+	828436038	BodyHitsImpacts-BodyIntoJos_05	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Windows\SFX\BodyHitsImpacts-BodyIntoJos_E8C64AD0.wem		\Actor-Mixer Hierarchy\Default Work Unit\BodyHitsImpacts-BodyIntoJos_05		55200
+	898831058	ESM_MG3_fx_science_fiction_alien_gibberish_01	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Windows\SFX\ESM_MG3_fx_science_fiction_alien_gibberish_01_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\SlimeOnClick\ESM_MG3_fx_science_fiction_alien_gibberish_01		235808
+	927594337	The Forest Breathes Now_1	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Windows\SFX\The Forest Breathes Now_1_FBC78EF0.wem		\Interactive Music Hierarchy\Music\AmbientMusic\The Forest Breathes Now_1\The Forest Breathes Now_1		37096576
+	1023083781	ESM_MG3_fx_science_fiction_alien_gibberish_06	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Windows\SFX\ESM_MG3_fx_science_fiction_alien_gibberish_06_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\SlimeOnClick\ESM_MG3_fx_science_fiction_alien_gibberish_06		342096
+	1056416234	LIQSuct_IMPACT-Slime Suctio	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Windows\SFX\LIQSuct_IMPACT-Slime Suctio_7BE772D6.wem		\Actor-Mixer Hierarchy\Default Work Unit\LIQSuct_IMPACT-Slime Suctio		105712
 

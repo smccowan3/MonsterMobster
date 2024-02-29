@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
-using UnityEditor.IMGUI.Controls;
+
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.ParticleSystemJobs;
@@ -24,6 +24,8 @@ public class MonsterUnit : MonoBehaviour
     public int shelterCost;
 
     public AK.Wwise.Event randomVoice;
+
+    public AK.Wwise.Event spawnNoise;
 
     // Start is called before the first frame update
     void Start()
@@ -230,6 +232,11 @@ public class MonsterUnit : MonoBehaviour
             randomVoice.Post(gameObject);
         }
         
+    }
+
+    public void OnSpawnNoise()
+    {
+        spawnNoise.Post(gameObject);
     }
 
 

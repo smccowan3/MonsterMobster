@@ -9,36 +9,302 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{D326F752-7CA2-0A14-FDB1-63ECE89D0199}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{C743AB3C-8283-F6FB-5E71-F86E5E547361}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
+				<ShareSets>
+					<Plugin Id="355113453" Name="Master_Meter" LibName="Wwise Meter" LibId="8454147"/>
+				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
 					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
 				</AudioDevices>
 			</Plugins>
 			<Busses>
-				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3803692087" Name="Master Audio Bus">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="355113453"/>
+						</ShareSets>
+					</PluginRefs>
+				</Bus>
 			</Busses>
+			<GameParameters>
+				<GameParameter Id="4245676100" Name="Master_Level"/>
+			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{D4DBE859-05EF-B65C-259A-23CB53820AA6}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{8F3A4E2C-8543-E648-FE34-CEA56DAC52C4}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
+				<File Id="48389856" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ESM_MG3_fx_foley_interactions_digital_pop_potion_liquid_01.wav</ShortName>
+					<CachePath>SFX/ESM_MG3_fx_foley_interactions_digital_pop_potion_liquid_01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="99018219" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Fate is Only Left to You.wav</ShortName>
+					<CachePath>SFX/Fate is Only Left to You_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="107702001" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BodyHitsImpacts-BodyIntoJos.wav</ShortName>
+					<CachePath>SFX/BodyHitsImpacts-BodyIntoJos_34F4A658.wem</CachePath>
+				</File>
+				<File Id="122804562" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FS10_77_02_Hard,IntenseWood.wav</ShortName>
+					<CachePath>SFX/FS10_77_02_Hard,IntenseWood_818F3B66.wem</CachePath>
+				</File>
+				<File Id="124421971" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ForestLightRain_SEU02.18.wav</ShortName>
+					<CachePath>SFX/ForestLightRain_SEU02.18_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="153465760" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BodyHitsImpacts-BodyIntoJos.wav</ShortName>
+					<CachePath>SFX/BodyHitsImpacts-BodyIntoJos_A20203C8.wem</CachePath>
+				</File>
+				<File Id="161120219" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BodyHitsImpacts-BodyIntoJos.wav</ShortName>
+					<CachePath>SFX/BodyHitsImpacts-BodyIntoJos_ACBC4D94.wem</CachePath>
+				</File>
 				<File Id="190858653" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WoodHitQuick_FS10-87.01.wav</ShortName>
-					<CachePath>SFX/WoodHitQuick_FS10-87.01_E00E8FC2.wem</CachePath>
+					<CachePath>SFX/WoodHitQuick_FS10-87.01_55057509.wem</CachePath>
+				</File>
+				<File Id="239366555" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ESM_MG3_fx_science_fiction_alien_gibberish_08.wav</ShortName>
+					<CachePath>SFX/ESM_MG3_fx_science_fiction_alien_gibberish_08_818F3B66.wem</CachePath>
+				</File>
+				<File Id="280489079" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ESM_Cool_UI_Button_10_Game_Click_Switch_UI_Classic.wav</ShortName>
+					<CachePath>SFX/ESM_Cool_UI_Button_10_Game_Click_Switch_UI_Classic_A89BDC4A.wem</CachePath>
+				</File>
+				<File Id="324868019" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ForestAfterRain_BW.1752.wav</ShortName>
+					<CachePath>SFX/ForestAfterRain_BW.1752_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="337509303" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ESM_MG3_fx_science_fiction_alien_gibberish_02.wav</ShortName>
+					<CachePath>SFX/ESM_MG3_fx_science_fiction_alien_gibberish_02_818F3B66.wem</CachePath>
+				</File>
+				<File Id="360219768" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BodyHitsImpacts-BodyIntoJos.wav</ShortName>
+					<CachePath>SFX/BodyHitsImpacts-BodyIntoJos_A06FDA76.wem</CachePath>
+				</File>
+				<File Id="395632469" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FS10_86_02_Hard,BreakingWoo.wav</ShortName>
+					<CachePath>SFX/FS10_86_02_Hard,BreakingWoo_818F3B66.wem</CachePath>
+				</File>
+				<File Id="407274218" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Believe in the Slime_2.wav</ShortName>
+					<CachePath>SFX/Believe in the Slime_2_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="430201428" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ESM_MG3_fx_science_fiction_alien_gibberish_09.wav</ShortName>
+					<CachePath>SFX/ESM_MG3_fx_science_fiction_alien_gibberish_09_818F3B66.wem</CachePath>
+				</File>
+				<File Id="449511603" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WoodHitSmall_FS10-94.04.wav</ShortName>
+					<CachePath>SFX/WoodHitSmall_FS10-94.04_818F3B66.wem</CachePath>
+				</File>
+				<File Id="475275108" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Forest_S08AM.32.wav</ShortName>
+					<CachePath>SFX/Forest_S08AM.32_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="574183791" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FS10_76_06_SmallWoodBreak_W.wav</ShortName>
+					<CachePath>SFX/FS10_76_06_SmallWoodBreak_W_818F3B66.wem</CachePath>
+				</File>
+				<File Id="722562023" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BodyHitsImpacts-BodyIntoJos.wav</ShortName>
+					<CachePath>SFX/BodyHitsImpacts-BodyIntoJos_364C70C6.wem</CachePath>
+				</File>
+				<File Id="783206219" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ESM_MG3_fx_science_fiction_alien_gibberish_05.wav</ShortName>
+					<CachePath>SFX/ESM_MG3_fx_science_fiction_alien_gibberish_05_818F3B66.wem</CachePath>
+				</File>
+				<File Id="790378538" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ESM_MG3_fx_science_fiction_alien_gibberish_03.wav</ShortName>
+					<CachePath>SFX/ESM_MG3_fx_science_fiction_alien_gibberish_03_818F3B66.wem</CachePath>
+				</File>
+				<File Id="828436038" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BodyHitsImpacts-BodyIntoJos.wav</ShortName>
+					<CachePath>SFX/BodyHitsImpacts-BodyIntoJos_E8C64AD0.wem</CachePath>
+				</File>
+				<File Id="898831058" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ESM_MG3_fx_science_fiction_alien_gibberish_01.wav</ShortName>
+					<CachePath>SFX/ESM_MG3_fx_science_fiction_alien_gibberish_01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="927594337" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>The Forest Breathes Now_1.wav</ShortName>
+					<CachePath>SFX/The Forest Breathes Now_1_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="1023083781" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ESM_MG3_fx_science_fiction_alien_gibberish_06.wav</ShortName>
+					<CachePath>SFX/ESM_MG3_fx_science_fiction_alien_gibberish_06_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1056416234" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LIQSuct_IMPACT-Slime Suctio.wav</ShortName>
+					<CachePath>SFX/LIQSuct_IMPACT-Slime Suctio_7BE772D6.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="702943128" Name="Stereo Delay (Custom)" LibName="Wwise Stereo Delay" LibId="8847363"/>
+				</Custom>
+				<ShareSets>
+					<Plugin Id="1551236760" Name="Small_Wooden_Room1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
-				<Event Id="4221916518" Name="BuildingPlacement" DurationType="OneShot" DurationMin="0.25013742" DurationMax="0.25013742">
+				<Event Id="4221916518" Name="BuildingPlacement" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.3486761" DurationMax="0.3486761">
 					<MediaRefs>
 						<MediaRef Id="190858653"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1551236760"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="2336583584" Name="BuildingPlacement2" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.5422442" DurationMax="0.5422442">
+					<MediaRefs>
+						<MediaRef Id="449511603"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1551236760"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="1842524950" Name="BuildingPlacement2_01" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.42666668" DurationMax="0.42666668">
+					<MediaRefs>
+						<MediaRef Id="449511603"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1551236760"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="1415332276" Name="BuildingPlacement_01" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.25013742" DurationMax="0.25013742">
+					<MediaRefs>
+						<MediaRef Id="190858653"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1551236760"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="3504582140" Name="PlayHatNoise" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.1564907" DurationMax="1.1564907">
+					<MediaRefs>
+						<MediaRef Id="48389856"/>
+						<MediaRef Id="430201428"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="417627684" Name="PlayMusic" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="99018219"/>
+						<MediaRef Id="407274218"/>
+						<MediaRef Id="927594337"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2391971545" Name="PlayRainSounds" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="124421971"/>
+						<MediaRef Id="324868019"/>
+						<MediaRef Id="475275108"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="702943128"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="3180268486" Name="PlayTreeHit" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.1093333" DurationMax="1.3226666">
+					<MediaRefs>
+						<MediaRef Id="122804562"/>
+						<MediaRef Id="395632469"/>
+						<MediaRef Id="574183791"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3161158948" Name="SlimeHeadHit" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.65695035" DurationMax="0.65695035">
+					<MediaRefs>
+						<MediaRef Id="360219768"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="124501002" Name="SlimeHeadHit_01" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.5839559" DurationMax="0.5839559">
+					<MediaRefs>
+						<MediaRef Id="107702001"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="124501001" Name="SlimeHeadHit_02" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.350398" DurationMax="1.350398">
+					<MediaRefs>
+						<MediaRef Id="722562023"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="124501000" Name="SlimeHeadHit_03" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.3321493" DurationMax="1.3321493">
+					<MediaRefs>
+						<MediaRef Id="161120219"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="124501007" Name="SlimeHeadHit_04" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.65695035" DurationMax="0.65695035">
+					<MediaRefs>
+						<MediaRef Id="153465760"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="124501006" Name="SlimeHeadHit_05" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.28700283" DurationMax="0.28700283">
+					<MediaRefs>
+						<MediaRef Id="828436038"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3106958816" Name="SlimeOnClick" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.406869" DurationMax="2.1182752">
+					<MediaRefs>
+						<MediaRef Id="239366555"/>
+						<MediaRef Id="337509303"/>
+						<MediaRef Id="783206219"/>
+						<MediaRef Id="790378538"/>
+						<MediaRef Id="898831058"/>
+						<MediaRef Id="1023083781"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2879679237" Name="SlimeSpawnSOund" MaxAttenuation="100" DurationType="OneShot" DurationMin="2.1182752" DurationMax="2.1182752">
+					<MediaRefs>
+						<MediaRef Id="1056416234"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3164408517" Name="UIClick" DurationType="OneShot" DurationMin="0.107599415" DurationMax="0.107599415">
+					<MediaRefs>
+						<MediaRef Id="280489079"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1551236760"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="2312763873" Name="UIClick_01" DurationType="OneShot" DurationMin="0.07608428" DurationMax="0.07608428">
+					<MediaRefs>
+						<MediaRef Id="280489079"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1551236760"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="2312763874" Name="UIClick_02" DurationType="OneShot" DurationMin="0.09047996" DurationMax="0.09047996">
+					<MediaRefs>
+						<MediaRef Id="280489079"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1551236760"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D7101703-A262-170A-7CAC-11E409A82735}</FileHash>
+	<FileHash>{1E884351-9304-A921-3797-7F15A70A2C06}</FileHash>
 </SoundBanksInfo>
