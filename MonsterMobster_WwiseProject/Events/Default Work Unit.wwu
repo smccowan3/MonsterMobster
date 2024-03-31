@@ -226,6 +226,39 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Tavern" ID="{B7B899C3-FDF0-4B1B-A31A-3A751E129654}">
+					<ChildrenList>
+						<Action Name="" ID="{3751BE7B-DC36-4B49-80E6-3B0677F82D0D}" ShortID="876041396">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ESM_Empire_Game_Settlement_Select_Entertainment_Tavern_Inn_Hotel_Bar_Pub" ID="{FFBF54F9-CBAD-4A2A-9236-D23CADF42420}" WorkUnitID="{A3B01B5F-C3D2-42B4-AD35-908B43EBC05D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Police" ID="{55212FF6-F398-4031-9706-80FDB54315E3}">
+					<ChildrenList>
+						<Action Name="" ID="{31956ECA-EAF3-456E-A94B-9E10F292C123}" ShortID="547722051">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PoliceSiren_SFXB_533" ID="{9C34BEC6-F5BC-4347-BEC2-64400781E7FD}" WorkUnitID="{A3B01B5F-C3D2-42B4-AD35-908B43EBC05D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Death" ID="{4392F3A8-112C-4284-BF02-67111B0F7480}">
+					<ChildrenList>
+						<Action Name="" ID="{700EF074-EFC1-454F-AA6F-6B1B40E0AD47}" ShortID="723495116">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="OS_FIRE_Plop_Perc" ID="{696B5C27-7DAF-43B0-AC37-5CD9FFB1A0A7}" WorkUnitID="{A3B01B5F-C3D2-42B4-AD35-908B43EBC05D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

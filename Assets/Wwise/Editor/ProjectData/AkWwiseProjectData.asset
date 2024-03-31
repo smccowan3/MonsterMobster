@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: c545ed4a78921c4b9abf74d82bf2251d
     GuidInternal: 
-    m_lastTime: -8584949847460789718
+    m_lastTime: -8584897954118313592
     List:
     - name: Main
       guid: e8feeacc2924b94a95a376bca9c59bab
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 830a84739c590e44be9373198f26036d
     GuidInternal: 
-    m_lastTime: -8584949286243028505
+    m_lastTime: -8584897954163883453
     List:
     - name: BuildingPlacement
       guid: 0ba74f17ca3a7e40b9f33cfcc03d4742
@@ -164,6 +164,23 @@ MonoBehaviour:
       maxAttenuation: 100
       maxDuration: 0.42666668
       minDuration: 0.42666668
+    - name: Death
+      guid: a8f392432c118442bf0267111b0f7480
+      id: 779278001
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 830a84739c590e44be9373198f26036d
+      - ElementName: Death
+        ObjectType: 3
+        guid: a8f392432c118442bf0267111b0f7480
+      Path: Events\Default Work Unit\Death
+      maxAttenuation: 100
+      maxDuration: 0.72648454
+      minDuration: 0.72648454
     - name: PlayHatNoise
       guid: cc859ee6e8ebf24084c66e5246b5afb2
       id: 3504582140
@@ -232,6 +249,23 @@ MonoBehaviour:
       maxAttenuation: 100
       maxDuration: 1.3226666
       minDuration: 1.1093333
+    - name: Police
+      guid: f62f215598f33140970680fdb54315e3
+      id: 291106007
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 830a84739c590e44be9373198f26036d
+      - ElementName: Police
+        ObjectType: 3
+        guid: f62f215598f33140970680fdb54315e3
+      Path: Events\Default Work Unit\Police
+      maxAttenuation: 0
+      maxDuration: 3.929988
+      minDuration: 3.929988
     - name: SlimeHeadHit
       guid: d089c0b52e020a42a85a6936f5e99b00
       id: 3161158948
@@ -247,8 +281,8 @@ MonoBehaviour:
         guid: d089c0b52e020a42a85a6936f5e99b00
       Path: Events\Default Work Unit\SlimeHeadHit
       maxAttenuation: 100
-      maxDuration: 0.65695035
-      minDuration: 0.65695035
+      maxDuration: 0.8668512
+      minDuration: 0.8668512
     - name: SlimeHeadHit_01
       guid: 07c1d13805fe57449500253563584890
       id: 124501002
@@ -264,8 +298,8 @@ MonoBehaviour:
         guid: 07c1d13805fe57449500253563584890
       Path: Events\Default Work Unit\SlimeHeadHit_01
       maxAttenuation: 100
-      maxDuration: 0.5839559
-      minDuration: 0.5839559
+      maxDuration: 0.74859875
+      minDuration: 0.74859875
     - name: SlimeHeadHit_02
       guid: 1cfa360ccccf7b42b229ebfe4ada59ff
       id: 124501001
@@ -281,8 +315,8 @@ MonoBehaviour:
         guid: 1cfa360ccccf7b42b229ebfe4ada59ff
       Path: Events\Default Work Unit\SlimeHeadHit_02
       maxAttenuation: 100
-      maxDuration: 1.350398
-      minDuration: 1.350398
+      maxDuration: 0.8960915
+      minDuration: 0.8960915
     - name: SlimeHeadHit_03
       guid: 1f2a3498b413c54c8cdab9430d38434f
       id: 124501000
@@ -298,8 +332,8 @@ MonoBehaviour:
         guid: 1f2a3498b413c54c8cdab9430d38434f
       Path: Events\Default Work Unit\SlimeHeadHit_03
       maxAttenuation: 100
-      maxDuration: 1.3321493
-      minDuration: 1.3321493
+      maxDuration: 2.500279
+      minDuration: 2.500279
     - name: SlimeHeadHit_04
       guid: 8723b9b9e3342b48ae7d77a3e9ab19de
       id: 124501007
@@ -315,8 +349,8 @@ MonoBehaviour:
         guid: 8723b9b9e3342b48ae7d77a3e9ab19de
       Path: Events\Default Work Unit\SlimeHeadHit_04
       maxAttenuation: 100
-      maxDuration: 0.65695035
-      minDuration: 0.65695035
+      maxDuration: 0.48370174
+      minDuration: 0.48370174
     - name: SlimeHeadHit_05
       guid: 7806db355032cb49b1431955c80217bc
       id: 124501006
@@ -332,8 +366,8 @@ MonoBehaviour:
         guid: 7806db355032cb49b1431955c80217bc
       Path: Events\Default Work Unit\SlimeHeadHit_05
       maxAttenuation: 100
-      maxDuration: 0.28700283
-      minDuration: 0.28700283
+      maxDuration: 0.20529972
+      minDuration: 0.20529972
     - name: SlimeOnClick
       guid: 2d4e5c1efe6f7e429eb3f99ff3f507ea
       id: 3106958816
@@ -349,8 +383,8 @@ MonoBehaviour:
         guid: 2d4e5c1efe6f7e429eb3f99ff3f507ea
       Path: Events\Default Work Unit\SlimeOnClick
       maxAttenuation: 100
-      maxDuration: 2.1182752
-      minDuration: 1.406869
+      maxDuration: 1.78125
+      minDuration: 1.1830312
     - name: SlimeSpawnSOund
       guid: 7a8b1fbf02416c48a1353e9ea28c56c3
       id: 2879679237
@@ -366,8 +400,25 @@ MonoBehaviour:
         guid: 7a8b1fbf02416c48a1353e9ea28c56c3
       Path: Events\Default Work Unit\SlimeSpawnSOund
       maxAttenuation: 100
-      maxDuration: 2.1182752
-      minDuration: 2.1182752
+      maxDuration: 1.78125
+      minDuration: 1.78125
+    - name: Tavern
+      guid: c399b8b7f0fd1b4ba31a3a751e129654
+      id: 2425052395
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 830a84739c590e44be9373198f26036d
+      - ElementName: Tavern
+        ObjectType: 3
+        guid: c399b8b7f0fd1b4ba31a3a751e129654
+      Path: Events\Default Work Unit\Tavern
+      maxAttenuation: 100
+      maxDuration: 3.288771
+      minDuration: 3.288771
     - name: UIClick
       guid: 9805424a2d3869468b584410a7d06ecb
       id: 3164408517
@@ -431,7 +482,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: cd6ece0a555dcf4bb7fbc016ecb2dc43
     GuidInternal: 
-    m_lastTime: -8584949271940740812
+    m_lastTime: -8584897468147625515
     List:
     - name: Master_Level
       guid: 7fb9a082b02e74409d76a290269e1b97
@@ -447,6 +498,20 @@ MonoBehaviour:
         ObjectType: 13
         guid: 7fb9a082b02e74409d76a290269e1b97
       Path: Game Parameters\Default Work Unit\Master_Level
+    - name: PItch
+      guid: a880eb6731832e459fc6c4ce0a879784
+      id: 1908158473
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cd6ece0a555dcf4bb7fbc016ecb2dc43
+      - ElementName: PItch
+        ObjectType: 13
+        guid: a880eb6731832e459fc6c4ce0a879784
+      Path: Game Parameters\Default Work Unit\PItch
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:

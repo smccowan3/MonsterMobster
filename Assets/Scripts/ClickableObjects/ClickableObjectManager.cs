@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -52,12 +53,22 @@ public class ClickableObjectManager : MonoBehaviour
             {
                 if (currentClickedObject.GetComponent<NavMeshAgent>() != null)
                 {
-                    print("Setting path");
-                    //currentClickedObject.GetComponent<NavMeshAgent>().SetDestination(GameObject.Find("MouseIndicator").transform.position);
-                    GameObject endpoint = Instantiate(movementIndicator,GameObject.Find("MouseIndicator").transform.position, GameObject.Find("MouseIndicator").transform.rotation);
-                    currentClickedObject.GetComponent<ClickableObject>().changePathEnd(endpoint);
-                    endpoint.GetComponent<PathLinkerAndDeleter>().LinkObject(currentClickedObject);
-                    changeClickedObject(null);
+                    RaycastHit hit;
+                    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                    if (Physics.Raycast(ray, out hit, 100))
+                    {
+
+                            print("Setting path");
+                            //currentClickedObject.GetComponent<NavMeshAgent>().SetDestination(GameObject.Find("MouseIndicator").transform.position);
+                            Vector3 endpointVector = GameObject.Find("MouseIndicator").transform.position;
+                            endpointVector.y = 0.5f;
+                            GameObject endpoint = Instantiate(movementIndicator, endpointVector, GameObject.Find("MouseIndicator").transform.rotation);
+                            currentClickedObject.GetComponent<ClickableObject>().changePathEnd(endpoint);
+                            endpoint.GetComponent<PathLinkerAndDeleter>().LinkObject(currentClickedObject);
+                            currentClickedObject.GetComponent<MonsterUnit>().linkedPath = endpoint;
+                            changeClickedObject(null);
+                    }
+                    
                 }
             }
         }

@@ -18,33 +18,30 @@ public class Building : MonoBehaviour
     [SerializeField] string objectName;
     public int shelterSupplied;
     public List<AK.Wwise.Event> PlacementEvents;
-
+    public bool spawner;
     public int buildingCost;
     // Start is called before the first frame update
     void Start()
     {
-        
-        //Vector3 newLocation = GameObject.Find("MainUI/MiddleLocation").GetComponent<RectTransform>().position;
-        //mainUI.GetComponent<RectTransform>().position = newLocation;
-        //mainUI.GetComponent<RectTransform>().rotation = new Quaternion(0, 0, 0, 0);
-        trainUI = mainUI.transform.Find("TrainUI").gameObject;
-        nameUI = mainUI.transform.Find("NameText").gameObject;
-        nameUI.GetComponent<TextMeshProUGUI>().text = objectName;
-        //trainUI.GetComponent<Image>().color = Color.red; //idle color
-        //trainUI.transform.Find("Text").gameObject.SetActive(false);
-        costUI = mainUI.transform.Find("TrainUI/Cost").gameObject;
-        spawnablesUI = new List<GameObject>();
-        for (int i = 0; i < spawnables.Count; i++)
+        if (spawner)
         {
-            spawnablesUI.Add(mainUI.transform.Find("Spawnables").GetChild(i).gameObject);
-            spawnablesUI[i].SetActive(true);
-            spawnablesUI[i].GetComponent<SpawnableUI>().building = this;
-            spawnablesUI[i].GetComponent<SpawnableUI>().spawnIndex = i;
-            spawnablesUI[i].GetComponent<SpawnableUI>().associatedSpawn = spawnables[i].GetComponent<SpawnableObject>();
-            //Texture2D previewTexture = AssetPreview.GetAssetPreview(spawnables[i]);
-            spawnablesUI[i].GetComponent<Image>().sprite = spawnables[i].transform.Find("Thumbnail").GetComponent<SpriteRenderer>().sprite;
+            trainUI = mainUI.transform.Find("TrainUI").gameObject;
+            nameUI = mainUI.transform.Find("NameText").gameObject;
+            nameUI.GetComponent<TextMeshProUGUI>().text = objectName;
+            costUI = mainUI.transform.Find("TrainUI/Cost").gameObject;
+            spawnablesUI = new List<GameObject>();
+            for (int i = 0; i < spawnables.Count; i++)
+            {
+                spawnablesUI.Add(mainUI.transform.Find("Spawnables").GetChild(i).gameObject);
+                spawnablesUI[i].SetActive(true);
+                spawnablesUI[i].GetComponent<SpawnableUI>().building = this;
+                spawnablesUI[i].GetComponent<SpawnableUI>().spawnIndex = i;
+                spawnablesUI[i].GetComponent<SpawnableUI>().associatedSpawn = spawnables[i].GetComponent<SpawnableObject>();
+                //Texture2D previewTexture = AssetPreview.GetAssetPreview(spawnables[i]);
+                spawnablesUI[i].GetComponent<Image>().sprite = spawnables[i].transform.Find("Thumbnail").GetComponent<SpriteRenderer>().sprite;
+            }
+            mainUI.transform.SetParent(GameObject.Find("MainUI").transform, false);
         }
-        mainUI.transform.SetParent(GameObject.Find("MainUI").transform, false);
         
     }
 
@@ -79,6 +76,7 @@ public class Building : MonoBehaviour
     {
         float countUp = spawnObject.GetComponent<SpawnableObject>().trainTime;
         string originalValue = costUI.GetComponent<TextMeshProUGUI>().text;
+        print("starting countdown");
         trainUI.GetComponentInChildren<TextMeshProUGUI>().text = Math.Round(countUp,2).ToString();
         costUI.SetActive(true);
         
@@ -97,6 +95,7 @@ public class Building : MonoBehaviour
 
         Vector3 newPos = currentPos + transform.forward*5;
         GameObject spawned = Instantiate(spawnObject, newPos, currentRotation);
+        FindAnyObjectByType<VictoryLoseProgressBar>().ChangePopulation(1);
         spawned.GetComponent<MonsterUnit>().OnSpawnNoise();
 
         currentlySpawning = false;

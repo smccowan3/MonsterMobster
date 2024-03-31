@@ -4,13 +4,13 @@ using UnityEngine;
 using TMPro;
 public class WoodManager : MonoBehaviour
 {
-    int woodAmount;
+    public int woodAmount;
     public TextMeshProUGUI woodtext;
     public GameObject errorGUI;
     // Start is called before the first frame update
     void Start()
     {
-        woodAmount = 0;
+        //woodAmount = 0;
     }
 
     // Update is called once per frame

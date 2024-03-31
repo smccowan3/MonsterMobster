@@ -4,6 +4,7 @@
 		<WorkUnit Name="Default Work Unit" ID="{0ACE6ECD-5D55-4BCF-B7FB-C016ECB2DC43}" PersistMode="Standalone">
 			<ChildrenList>
 				<GameParameter Name="Master_Level" ID="{82A0B97F-2EB0-4074-9D76-A290269E1B97}"/>
+				<GameParameter Name="PItch" ID="{67EB80A8-8331-452E-9FC6-C4CE0A879784}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

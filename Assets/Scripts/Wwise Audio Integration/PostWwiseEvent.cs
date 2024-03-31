@@ -34,6 +34,11 @@ public class PostWwiseEvent : MonoBehaviour
         
     }
 
+    public void PlaySpecificSound(AK.Wwise.Event myEvent)
+    {
+        myEvent.Post(gameObject);        
+    }
+
     // Update is called once per frame
     void Update()
     {

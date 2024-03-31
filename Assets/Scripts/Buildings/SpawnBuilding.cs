@@ -29,9 +29,11 @@ public class SpawnBuilding : MonoBehaviour
 
     public void spawnBuilding()
     {
+        print("spawning building");
         bool buildable = FindAnyObjectByType<WoodManager>().CheckIfWoodSufficient(building.GetComponent<Building>().buildingCost);
         if (buildable)
         {
+            print("building");
             FindAnyObjectByType<WoodManager>().AddSubtractWood(-building.GetComponent<Building>().buildingCost);
             FindAnyObjectByType<ShelterManage>().AddSubtractShelter(building.GetComponent<Building>().shelterSupplied);
             GameObject bldg = Instantiate(building, Input.mousePosition, new Quaternion(0, 180, 0, 0));
@@ -40,6 +42,7 @@ public class SpawnBuilding : MonoBehaviour
         }
         else
         {
+            print("not enough resources");
             FindAnyObjectByType<WoodManager>().DisplayErrorUI(building.GetComponent<Building>().buildingCost);
         }
 

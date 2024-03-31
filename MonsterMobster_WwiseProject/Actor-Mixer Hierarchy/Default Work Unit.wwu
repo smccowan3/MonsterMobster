@@ -255,6 +255,11 @@
 				<Sound Name="BodyHitsImpacts-BodyIntoJos" ID="{2B2DCF95-BF67-458D-A010-2AD95C18C17A}" ShortID="788745266">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-480</Value>
+							</ValueList>
+						</Property>
 						<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
@@ -299,6 +304,11 @@
 				<Sound Name="BodyHitsImpacts-BodyIntoJos_01" ID="{CDCCE915-502F-4D97-89CF-ABEE174C3CE6}" ShortID="91441733">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-430</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-13</Value>
@@ -338,6 +348,11 @@
 				<Sound Name="BodyHitsImpacts-BodyIntoJos_02" ID="{0BEF45D3-C995-4B17-AF18-16057D1691D8}" ShortID="930231886">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>710</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-12</Value>
@@ -377,6 +392,11 @@
 				<Sound Name="BodyHitsImpacts-BodyIntoJos_03" ID="{A1402038-066E-4D67-B672-EC3E4FF90C7A}" ShortID="761767054">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-1090</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-14</Value>
@@ -416,6 +436,11 @@
 				<Sound Name="BodyHitsImpacts-BodyIntoJos_04" ID="{287006AE-8E38-4B86-9B43-A6083DD34775}" ShortID="210963967">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>530</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-12</Value>
@@ -455,6 +480,11 @@
 				<Sound Name="BodyHitsImpacts-BodyIntoJos_05" ID="{31904AAD-453F-41D4-BE2D-42A2F1E29F76}" ShortID="899154947">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>580</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-9</Value>
@@ -528,6 +558,45 @@
 							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{45D29E7F-84D4-4CF9-AE9A-463728032AE7}" ShortID="533982793">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Pitch"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="PItch" ID="{67EB80A8-8331-452E-9FC6-C4CE0A879784}" WorkUnitID="{0ACE6ECD-5D55-4BCF-B7FB-C016ECB2DC43}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{31508398-4954-44A9-81CA-8BFDEA9F6A30}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="65537"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>0</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
 					<ActiveSourceList>
 						<ActiveSource Name="LIQSuct_IMPACT-Slime Suctio" ID="{5074C871-E0F5-46E4-BFBE-7E0E3F134195}" Platform="Linked"/>
 					</ActiveSourceList>
@@ -797,6 +866,45 @@
 							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{046F4B44-8E3C-4D07-8B42-1C0E1298E3DD}" ShortID="635398890">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Pitch"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="PItch" ID="{67EB80A8-8331-452E-9FC6-C4CE0A879784}" WorkUnitID="{0ACE6ECD-5D55-4BCF-B7FB-C016ECB2DC43}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{2218A81A-2B9E-4983-8821-935CFC924A6B}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="65537"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-600</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>600</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
 					<ActiveSourceList>
 						<ActiveSource Name="ESM_MG3_fx_science_fiction_alien_gibberish_09" ID="{C38E1C9C-D3CC-4B01-ADA5-DE0B6F4A7DCD}" Platform="Linked"/>
 					</ActiveSourceList>
@@ -822,11 +930,6 @@
 								<Property Name="OutputBusHighpass" Type="int16">
 									<ValueList>
 										<Value>40</Value>
-									</ValueList>
-								</Property>
-								<Property Name="Pitch" Type="int32">
-									<ValueList>
-										<Value>-300</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -858,11 +961,6 @@
 										<Value>39</Value>
 									</ValueList>
 								</Property>
-								<Property Name="Pitch" Type="int32">
-									<ValueList>
-										<Value>-230</Value>
-									</ValueList>
-								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -890,11 +988,6 @@
 								<Property Name="OutputBusHighpass" Type="int16">
 									<ValueList>
 										<Value>40</Value>
-									</ValueList>
-								</Property>
-								<Property Name="Pitch" Type="int32">
-									<ValueList>
-										<Value>-300</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -926,11 +1019,6 @@
 										<Value>39</Value>
 									</ValueList>
 								</Property>
-								<Property Name="Pitch" Type="int32">
-									<ValueList>
-										<Value>-300</Value>
-									</ValueList>
-								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -960,11 +1048,6 @@
 										<Value>40</Value>
 									</ValueList>
 								</Property>
-								<Property Name="Pitch" Type="int32">
-									<ValueList>
-										<Value>-300</Value>
-									</ValueList>
-								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-4</Value>
@@ -988,6 +1071,45 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{76A1FB16-A45B-43CE-9194-B2E386856957}" ShortID="113242648">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Pitch"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="PItch" ID="{67EB80A8-8331-452E-9FC6-C4CE0A879784}" WorkUnitID="{0ACE6ECD-5D55-4BCF-B7FB-C016ECB2DC43}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{A02374F9-7CF2-48FA-9F96-8BA36DCB953E}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-600</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>600</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="ESM_MG3_fx_science_fiction_alien_gibberish_06" ID="{1F58AF2A-50AE-4E86-A561-986F5AFDAB6E}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -997,11 +1119,6 @@
 								<Property Name="OutputBusHighpass" Type="int16">
 									<ValueList>
 										<Value>36</Value>
-									</ValueList>
-								</Property>
-								<Property Name="Pitch" Type="int32">
-									<ValueList>
-										<Value>-350</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1026,7 +1143,109 @@
 								<ActiveSource Name="ESM_MG3_fx_science_fiction_alien_gibberish_08" ID="{CE1354E1-7EAE-45FB-9EE1-0D29DF66CB69}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="ESM_MG3_fx_science_fiction_alien_gibberish_04" ID="{B2391EE1-146E-4DE5-864E-5B93F594342D}" ShortID="769618255">
+							<PropertyList>
+								<Property Name="OutputBusHighpass" Type="int16">
+									<ValueList>
+										<Value>36</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5B5D076A-60ED-4DB2-91F7-E72857B54E70}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D030C27B-5E1A-4719-AFC4-4F04F07B698C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ESM_MG3_fx_science_fiction_alien_gibberish_08" ID="{1A290F48-FD77-4B2A-A90A-43FAFF770637}">
+									<Language>SFX</Language>
+									<AudioFile>ESM_MG3_fx_science_fiction_alien_gibberish_08.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="239366555"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ESM_MG3_fx_science_fiction_alien_gibberish_08" ID="{1A290F48-FD77-4B2A-A90A-43FAFF770637}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ESM_MG3_fx_science_fiction_alien_gibberish_07" ID="{B99D8DEA-651F-4C7C-8622-4A6C8FC9FEA9}" ShortID="271649161">
+							<PropertyList>
+								<Property Name="OutputBusHighpass" Type="int16">
+									<ValueList>
+										<Value>36</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5B5D076A-60ED-4DB2-91F7-E72857B54E70}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D030C27B-5E1A-4719-AFC4-4F04F07B698C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ESM_MG3_fx_science_fiction_alien_gibberish_08" ID="{6BCAF79D-57FF-462F-BC4A-78ECE31A9174}">
+									<Language>SFX</Language>
+									<AudioFile>ESM_MG3_fx_science_fiction_alien_gibberish_08.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="239366555"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ESM_MG3_fx_science_fiction_alien_gibberish_08" ID="{6BCAF79D-57FF-462F-BC4A-78ECE31A9174}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{9F962DC1-169E-42F9-BB26-42C6E6B29BC0}" ShortID="978746983">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Pitch"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="PItch" ID="{67EB80A8-8331-452E-9FC6-C4CE0A879784}" WorkUnitID="{0ACE6ECD-5D55-4BCF-B7FB-C016ECB2DC43}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{7D97DA4F-AB53-4B1A-B046-4B3542EBF1E2}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="65537"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-600</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>600</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="TreeHit" ID="{0513B7E0-E3EB-4329-8F2D-1A92EFC3C1F4}" ShortID="823018908">
 					<PropertyList>
@@ -1152,6 +1371,107 @@
 						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
+				<Sound Name="ESM_Empire_Game_Settlement_Select_Entertainment_Tavern_Inn_Hotel_Bar_Pub" ID="{FFBF54F9-CBAD-4A2A-9236-D23CADF42420}" ShortID="873287344">
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Attenuation" ID="{E773C64F-6361-419A-883E-80D80C354564}" WorkUnitID="{58E08EBF-2577-4FEB-ADA2-001576124404}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5B5D076A-60ED-4DB2-91F7-E72857B54E70}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D030C27B-5E1A-4719-AFC4-4F04F07B698C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="ESM_Empire_Game_Settlement_Select_Entertainment_Tavern_Inn_Hotel_Bar_Pub" ID="{088ABFF6-2F55-47F7-B5D4-9FDCA63187E3}">
+							<Language>SFX</Language>
+							<AudioFile>ESM_Empire_Game_Settlement_Select_Entertainment_Tavern_Inn_Hotel_Bar_Pub.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="430301153"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="ESM_Empire_Game_Settlement_Select_Entertainment_Tavern_Inn_Hotel_Bar_Pub" ID="{088ABFF6-2F55-47F7-B5D4-9FDCA63187E3}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="PoliceSiren_SFXB_533" ID="{9C34BEC6-F5BC-4347-BEC2-64400781E7FD}" ShortID="1042687120">
+					<PropertyList>
+						<Property Name="OutputBusLowpass" Type="int16">
+							<ValueList>
+								<Value>61</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>2</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5B5D076A-60ED-4DB2-91F7-E72857B54E70}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D030C27B-5E1A-4719-AFC4-4F04F07B698C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="PoliceSiren_SFXB_533" ID="{067270AE-5DBD-43EF-A0D5-B1229F0B2AE6}">
+							<PropertyList>
+								<Property Name="FadeOutDuration" Type="Real64" Value="3.13532121212121"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="3.92998787878788"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>PoliceSiren_SFXB.533.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="585745606"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="PoliceSiren_SFXB_533" ID="{067270AE-5DBD-43EF-A0D5-B1229F0B2AE6}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="OS_FIRE_Plop_Perc" ID="{696B5C27-7DAF-43B0-AC37-5CD9FFB1A0A7}" ShortID="8578433">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>610</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-15</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Attenuation(NLPF)" ID="{E003BD38-3198-4201-BC10-A8C63F38F1FF}" WorkUnitID="{58E08EBF-2577-4FEB-ADA2-001576124404}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5B5D076A-60ED-4DB2-91F7-E72857B54E70}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D030C27B-5E1A-4719-AFC4-4F04F07B698C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="OS_FIRE_Plop_Perc" ID="{6AEEA39B-DA40-4DB5-B876-8619825E76EA}">
+							<Language>SFX</Language>
+							<AudioFile>OS_FIRE_Plop_Perc.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="526743540"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="OS_FIRE_Plop_Perc" ID="{6AEEA39B-DA40-4DB5-B876-8619825E76EA}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

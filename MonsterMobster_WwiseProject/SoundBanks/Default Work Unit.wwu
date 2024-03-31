@@ -5,11 +5,13 @@
 			<ChildrenList>
 				<SoundBank Name="Main" ID="{CCEAFEE8-2429-4AB9-95A3-76BCA9C59BAB}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Police" ID="{55212FF6-F398-4031-9706-80FDB54315E3}" WorkUnitID="{73840A83-599C-440E-BE93-73198F26036D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="BuildingPlacement" ID="{174FA70B-3ACA-407E-B9F3-3CFCC03D4742}" WorkUnitID="{73840A83-599C-440E-BE93-73198F26036D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="PlayHatNoise" ID="{E69E85CC-EBE8-40F2-84C6-6E5246B5AFB2}" WorkUnitID="{73840A83-599C-440E-BE93-73198F26036D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="SlimeHeadHit" ID="{B5C089D0-022E-420A-A85A-6936F5E99B00}" WorkUnitID="{73840A83-599C-440E-BE93-73198F26036D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="SlimeHeadHit_02" ID="{0C36FA1C-CFCC-427B-B229-EBFE4ADA59FF}" WorkUnitID="{73840A83-599C-440E-BE93-73198F26036D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="SlimeOnClick" ID="{1E5C4E2D-6FFE-427E-9EB3-F99FF3F507EA}" WorkUnitID="{73840A83-599C-440E-BE93-73198F26036D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Death" ID="{4392F3A8-112C-4284-BF02-67111B0F7480}" WorkUnitID="{73840A83-599C-440E-BE93-73198F26036D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="UIClick_02" ID="{61AB929D-B6D1-430F-8B93-CB9B83B234CA}" WorkUnitID="{73840A83-599C-440E-BE93-73198F26036D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="UIClick_01" ID="{4AF71215-FFF0-439E-9680-9349467FBA11}" WorkUnitID="{73840A83-599C-440E-BE93-73198F26036D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="ESM_Cool_UI_Button_10_Game_Click_Switch_UI_Classic" ID="{4C469511-8BC3-441A-AFB0-77ABD040420F}" WorkUnitID="{A3B01B5F-C3D2-42B4-AD35-908B43EBC05D}" Origin="Manual" Filter="7"/>
@@ -21,6 +23,7 @@
 						<ObjectRef Name="UIClick" ID="{4A420598-382D-4669-8B58-4410A7D06ECB}" WorkUnitID="{73840A83-599C-440E-BE93-73198F26036D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="SlimeHeadHit_04" ID="{B9B92387-34E3-482B-AE7D-77A3E9AB19DE}" WorkUnitID="{73840A83-599C-440E-BE93-73198F26036D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="SlimeHeadHit_05" ID="{35DB0678-3250-49CB-B143-1955C80217BC}" WorkUnitID="{73840A83-599C-440E-BE93-73198F26036D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Tavern" ID="{B7B899C3-FDF0-4B1B-A31A-3A751E129654}" WorkUnitID="{73840A83-599C-440E-BE93-73198F26036D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="PlayRainSounds" ID="{F0EB4113-6340-4BE6-9263-263629DED059}" WorkUnitID="{73840A83-599C-440E-BE93-73198F26036D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="PlayTreeHit" ID="{44EB5331-A480-4CBF-98AB-24C75A5FAB7B}" WorkUnitID="{73840A83-599C-440E-BE93-73198F26036D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="SlimeHeadHit_03" ID="{98342A1F-13B4-4CC5-8CDA-B9430D38434F}" WorkUnitID="{73840A83-599C-440E-BE93-73198F26036D}" Origin="Manual" Filter="7"/>

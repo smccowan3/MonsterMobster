@@ -9,6 +9,6 @@ public class VolumeMonitor : MonoBehaviour
 
     void Update()
     {
-       print(volumeLevel.GetGlobalValue().ToString());
+       //print(volumeLevel.GetGlobalValue().ToString());
     }
 }

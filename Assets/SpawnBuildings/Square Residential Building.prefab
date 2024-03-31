@@ -68,7 +68,8 @@ MonoBehaviour:
   - idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 6f6244cd35f21d14e9f7b4d6d6c4286f, type: 2}
-  buildingCost: 50
+  spawner: 1
+  buildingCost: 100
 --- !u!208 &8747193706796347685
 NavMeshObstacle:
   m_ObjectHideFlags: 0

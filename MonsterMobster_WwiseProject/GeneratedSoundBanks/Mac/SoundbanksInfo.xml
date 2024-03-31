@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{C743AB3C-8283-F6FB-5E71-F86E5E547361}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{1C35C8C7-03AA-A4C6-A330-5400F67E6E67}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -31,10 +31,11 @@
 				</Bus>
 			</Busses>
 			<GameParameters>
+				<GameParameter Id="1908158473" Name="PItch"/>
 				<GameParameter Id="4245676100" Name="Master_Level"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{8F3A4E2C-8543-E648-FE34-CEA56DAC52C4}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{C9CFB1C8-F3E6-4CA5-ABDC-530CA1BF862E}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -102,6 +103,10 @@
 					<ShortName>ESM_MG3_fx_science_fiction_alien_gibberish_09.wav</ShortName>
 					<CachePath>SFX/ESM_MG3_fx_science_fiction_alien_gibberish_09_818F3B66.wem</CachePath>
 				</File>
+				<File Id="430301153" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ESM_Empire_Game_Settlement_Select_Entertainment_Tavern_Inn_Hotel_Bar_Pub.wav</ShortName>
+					<CachePath>SFX/ESM_Empire_Game_Settlement_Select_Entertainment_Tavern_Inn_Hotel_Bar_Pub_818F3B66.wem</CachePath>
+				</File>
 				<File Id="449511603" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WoodHitSmall_FS10-94.04.wav</ShortName>
 					<CachePath>SFX/WoodHitSmall_FS10-94.04_818F3B66.wem</CachePath>
@@ -110,9 +115,17 @@
 					<ShortName>Forest_S08AM.32.wav</ShortName>
 					<CachePath>SFX/Forest_S08AM.32_FBC78EF0.wem</CachePath>
 				</File>
+				<File Id="526743540" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>OS_FIRE_Plop_Perc.wav</ShortName>
+					<CachePath>SFX/OS_FIRE_Plop_Perc_818F3B66.wem</CachePath>
+				</File>
 				<File Id="574183791" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FS10_76_06_SmallWoodBreak_W.wav</ShortName>
 					<CachePath>SFX/FS10_76_06_SmallWoodBreak_W_818F3B66.wem</CachePath>
+				</File>
+				<File Id="585745606" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PoliceSiren_SFXB.533.wav</ShortName>
+					<CachePath>SFX/PoliceSiren_SFXB.533_8BFA96D8.wem</CachePath>
 				</File>
 				<File Id="722562023" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BodyHitsImpacts-BodyIntoJos.wav</ShortName>
@@ -196,6 +209,11 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
+				<Event Id="779278001" Name="Death" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.72648454" DurationMax="0.72648454">
+					<MediaRefs>
+						<MediaRef Id="526743540"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3504582140" Name="PlayHatNoise" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.1564907" DurationMax="1.1564907">
 					<MediaRefs>
 						<MediaRef Id="48389856"/>
@@ -228,37 +246,42 @@
 						<MediaRef Id="574183791"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3161158948" Name="SlimeHeadHit" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.65695035" DurationMax="0.65695035">
+				<Event Id="291106007" Name="Police" DurationType="OneShot" DurationMin="3.929988" DurationMax="3.929988">
+					<MediaRefs>
+						<MediaRef Id="585745606"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3161158948" Name="SlimeHeadHit" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.8668512" DurationMax="0.8668512">
 					<MediaRefs>
 						<MediaRef Id="360219768"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="124501002" Name="SlimeHeadHit_01" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.5839559" DurationMax="0.5839559">
+				<Event Id="124501002" Name="SlimeHeadHit_01" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.74859875" DurationMax="0.74859875">
 					<MediaRefs>
 						<MediaRef Id="107702001"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="124501001" Name="SlimeHeadHit_02" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.350398" DurationMax="1.350398">
+				<Event Id="124501001" Name="SlimeHeadHit_02" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.8960915" DurationMax="0.8960915">
 					<MediaRefs>
 						<MediaRef Id="722562023"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="124501000" Name="SlimeHeadHit_03" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.3321493" DurationMax="1.3321493">
+				<Event Id="124501000" Name="SlimeHeadHit_03" MaxAttenuation="100" DurationType="OneShot" DurationMin="2.500279" DurationMax="2.500279">
 					<MediaRefs>
 						<MediaRef Id="161120219"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="124501007" Name="SlimeHeadHit_04" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.65695035" DurationMax="0.65695035">
+				<Event Id="124501007" Name="SlimeHeadHit_04" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.48370174" DurationMax="0.48370174">
 					<MediaRefs>
 						<MediaRef Id="153465760"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="124501006" Name="SlimeHeadHit_05" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.28700283" DurationMax="0.28700283">
+				<Event Id="124501006" Name="SlimeHeadHit_05" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.20529972" DurationMax="0.20529972">
 					<MediaRefs>
 						<MediaRef Id="828436038"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3106958816" Name="SlimeOnClick" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.406869" DurationMax="2.1182752">
+				<Event Id="3106958816" Name="SlimeOnClick" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.1830312" DurationMax="1.78125">
 					<MediaRefs>
 						<MediaRef Id="239366555"/>
 						<MediaRef Id="337509303"/>
@@ -268,9 +291,14 @@
 						<MediaRef Id="1023083781"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2879679237" Name="SlimeSpawnSOund" MaxAttenuation="100" DurationType="OneShot" DurationMin="2.1182752" DurationMax="2.1182752">
+				<Event Id="2879679237" Name="SlimeSpawnSOund" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.78125" DurationMax="1.78125">
 					<MediaRefs>
 						<MediaRef Id="1056416234"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2425052395" Name="Tavern" MaxAttenuation="100" DurationType="OneShot" DurationMin="3.288771" DurationMax="3.288771">
+					<MediaRefs>
+						<MediaRef Id="430301153"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3164408517" Name="UIClick" DurationType="OneShot" DurationMin="0.107599415" DurationMax="0.107599415">
@@ -304,7 +332,10 @@
 					</PluginRefs>
 				</Event>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="1908158473" Name="PItch"/>
+			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{1E884351-9304-A921-3797-7F15A70A2C06}</FileHash>
+	<FileHash>{D0BB8A29-B939-9F05-1A76-82F56764A784}</FileHash>
 </SoundBanksInfo>

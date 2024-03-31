@@ -17,10 +17,12 @@ namespace AK
         static const AkUniqueID BUILDINGPLACEMENT2 = 2336583584U;
         static const AkUniqueID BUILDINGPLACEMENT2_01 = 1842524950U;
         static const AkUniqueID BUILDINGPLACEMENT_01 = 1415332276U;
+        static const AkUniqueID DEATH = 779278001U;
         static const AkUniqueID PLAYHATNOISE = 3504582140U;
         static const AkUniqueID PLAYMUSIC = 417627684U;
         static const AkUniqueID PLAYRAINSOUNDS = 2391971545U;
         static const AkUniqueID PLAYTREEHIT = 3180268486U;
+        static const AkUniqueID POLICE = 291106007U;
         static const AkUniqueID SLIMEHEADHIT = 3161158948U;
         static const AkUniqueID SLIMEHEADHIT_01 = 124501002U;
         static const AkUniqueID SLIMEHEADHIT_02 = 124501001U;
@@ -29,6 +31,7 @@ namespace AK
         static const AkUniqueID SLIMEHEADHIT_05 = 124501006U;
         static const AkUniqueID SLIMEONCLICK = 3106958816U;
         static const AkUniqueID SLIMESPAWNSOUND = 2879679237U;
+        static const AkUniqueID TAVERN = 2425052395U;
         static const AkUniqueID UICLICK = 3164408517U;
         static const AkUniqueID UICLICK_01 = 2312763873U;
         static const AkUniqueID UICLICK_02 = 2312763874U;
@@ -37,6 +40,7 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID MASTER_LEVEL = 4245676100U;
+        static const AkUniqueID PITCH = 1908158473U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS

@@ -5,10 +5,13 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.ParticleSystemJobs;
-
+using UnityEngine.UI;
+using TMPro;
 public class MonsterUnit : MonoBehaviour
 {
     public string job;
+    bool automatic;
+    public void toggleAutomatic(GameObject button) { automatic = !automatic; if (automatic) button.GetComponent<Image>().color = Color.green; else button.GetComponent<Image>().color = Color.white; } 
     public bool busy;
     Animator slimeAnimator;
     NavMeshAgent agent;
@@ -20,12 +23,18 @@ public class MonsterUnit : MonoBehaviour
     public float woodcuttingTime = 10f;
     public float treeDropDistance = 2f;
 
+    public int shelterCost; //this is how much shelter it costs to summon this unit
+    public GameObject linkedPath;
 
-    public int shelterCost;
+    public int voicePitch;
 
+    //audio
     public AK.Wwise.Event randomVoice;
-
     public AK.Wwise.Event spawnNoise;
+    public AK.Wwise.Event deathNoise;
+
+   
+
 
     // Start is called before the first frame update
     void Start()
@@ -34,37 +43,10 @@ public class MonsterUnit : MonoBehaviour
         busy = false;
         slimeAnimator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
+        voicePitch = Random.Range(0, 100);
+        AkSoundEngine.SetRTPCValue("Pitch", voicePitch, gameObject);
+        AkSoundEngine.SetRTPCValue("Pitch", voicePitch, transform.Find("ButtonClickSound").gameObject);
     }
-
-    /*void CastWideArcRays()
-    {
-        float startAngle = -arcAngle / 2f; // Starting angle of the arc
-        float angleStep = arcAngle / (float)(rayCount - 1); // Angle between each ray
-
-        for (int i = 0; i < rayCount; i++)
-        {
-            // Calculate the direction of the ray based on the current angle
-            float angle = startAngle + i * angleStep;
-            Vector3 rayDirection = Quaternion.Euler(0f, angle, 0f) * transform.forward;
-
-            // Cast a ray in the calculated direction
-            Ray ray = new Ray(transform.position + new Vector3(0,1,0), rayDirection);
-            Debug.DrawRay(ray.origin, ray.direction * rayDistance, Color.red);
-
-            // Perform other logic based on the ray hit if needed
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, rayDistance))
-            {
-                // Handle the hit, e.g., print the name of the hit object
-                Debug.Log("Hit: " + hit.collider.gameObject.name);
-            }
-
-            if (GameObject.Find("TreeMaterials").GetComponent<TreeMats>().treeMaterials.Contains(hit.collider.GetComponentInChildren<MeshRenderer>().material))
-            {
-                Debug.Log("Player is over a tree on the terrain!");
-            }
-        }
-    }*/
 
     // Update is called once per frame
     void Update()
@@ -77,7 +59,12 @@ public class MonsterUnit : MonoBehaviour
         {
             
         }
-        else 
+        else if (job == "Woodcutting" && automatic)
+        {
+            Vector3 targetPosition = GetComponent<TreeDetection>().findNearestTree();
+            GetComponent<NavMeshAgent>().SetDestination(targetPosition);
+        }
+        if(job == "Woodcutting")
         {
             
             GetComponent<TreeDetection>().CheckTrees(this);
@@ -96,14 +83,13 @@ public class MonsterUnit : MonoBehaviour
         }
     }
 
-    /*private void OnCollisionEnter(Collision collision)
+    public void killUnit()
     {
-        if (collision.gameObject.CompareTag("Tree") && job == "Woodcutting"){
-            
-            collision.gameObject.GetComponent<Animator>().SetTrigger("Cut Down");
-            
-        }
-    }*/
+        FindAnyObjectByType<ShelterManage>().AddSubtractShelter(shelterCost);
+        FindAnyObjectByType<VictoryLoseProgressBar>().ChangePopulation(-1);
+        deathNoise.Post(gameObject);
+        Destroy(gameObject);
+    }
 
     public void startCut(Animator treeAnimator)
     {
@@ -112,11 +98,8 @@ public class MonsterUnit : MonoBehaviour
 
     IEnumerator waitForCut(Animator treeAnimator)
     {
-        //treeAnimator.SetTrigger("Cut Down");
         
-        //StartCoroutine(rotateTreeDependingOnPlayer(treeAnimator.gameObject));
         StartCoroutine(fadeTreeOut(treeAnimator.gameObject));
-        //yield return new WaitForSeconds(woodcuttingTime / 2);
         
         
         yield return null;
@@ -153,49 +136,40 @@ public class MonsterUnit : MonoBehaviour
         slimeAnimator.SetBool("Woodcutting", false);
         busy = false;
         print("+1 wood");
-        FindAnyObjectByType<WoodManager>().AddSubtractWood(10);
+        int woodmodifier = int.Parse(GameObject.Find("MainUI/Services/Resources/Objects/Tavern").GetComponentInChildren<TextMeshProUGUI>().text);
+        FindAnyObjectByType<WoodManager>().AddSubtractWood(10+woodmodifier);
         yield return null;
 
     }
 
-
-    IEnumerator rotateTreeDependingOnPlayer(GameObject tree)
+    public void BecomeTaverner()
     {
-        //also move tree
-        // Get the initial rotation of the object
-        Quaternion startRotation = tree.transform.rotation;
-        Vector3 startPosition = tree.transform.position;
-
-        // Calculate the target rotation away from the player
-        Vector3 directionToPlayer = transform.Find("Body").position - tree.transform.position;
-        // Project the direction onto the XZ plane to get the rotation axis
-        Vector3 rotationAxis = Vector3.ProjectOnPlane(directionToPlayer, Vector3.up).normalized;
-
-        // Calculate the target rotation by rotating around the calculated axis
-        Quaternion targetRotation = Quaternion.AngleAxis(90f, rotationAxis) * startRotation;
-        
-        float rotationDuration = woodcuttingTime / 2;
-        // Interpolate the rotation over time
-        float elapsedTime = 0f;
-        while (elapsedTime < rotationDuration)
+        if(!busy)
         {
-            if (tree != null)
+            if(job != null)
             {
-                Vector3 moveDirection = -directionToPlayer.normalized;
-                Vector3 targetPosition = startPosition + moveDirection * treeDropDistance;
-                tree.transform.position = Vector3.Lerp(startPosition, targetPosition, elapsedTime / rotationDuration);
-                tree.transform.rotation = Quaternion.Slerp(startRotation, targetRotation, elapsedTime / rotationDuration);
-                elapsedTime += Time.deltaTime;
-                yield return null;
+                transform.Find("Body/" + job + "Hat").gameObject.SetActive(false);
             }
+            job = "Taverner";
+            transform.Find("Body/TavernerHat").gameObject.SetActive(true);
+
         }
-         
-        // Ensure the final rotation is exactly the target rotation
-        tree.transform.rotation = targetRotation;
-        tree.transform.position = startPosition + -directionToPlayer.normalized * treeDropDistance;
-        Destroy(tree);
-        yield return null;
     }
+
+    public void BecomePolice()
+    {
+        if (!busy)
+        {
+            if (job != null)
+            {
+                transform.Find("Body/" + job + "Hat").gameObject.SetActive(false);
+            }
+            job = "Police";
+            transform.Find("Body/PoliceHat").gameObject.SetActive(true);
+
+        }
+    }
+
 
     public void BecomeWoodcutter()
     {

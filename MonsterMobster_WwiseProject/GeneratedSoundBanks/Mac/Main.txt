@@ -4,13 +4,16 @@ Event	ID	Name			Wwise Object Path	Notes
 	124501002	SlimeHeadHit_01			\Default Work Unit\SlimeHeadHit_01	
 	124501006	SlimeHeadHit_05			\Default Work Unit\SlimeHeadHit_05	
 	124501007	SlimeHeadHit_04			\Default Work Unit\SlimeHeadHit_04	
+	291106007	Police			\Default Work Unit\Police	
 	417627684	PlayMusic			\Default Work Unit\PlayMusic	
+	779278001	Death			\Default Work Unit\Death	
 	1415332276	BuildingPlacement_01			\Default Work Unit\BuildingPlacement_01	
 	1842524950	BuildingPlacement2_01			\Default Work Unit\BuildingPlacement2_01	
 	2312763873	UIClick_01			\Default Work Unit\UIClick_01	
 	2312763874	UIClick_02			\Default Work Unit\UIClick_02	
 	2336583584	BuildingPlacement2			\Default Work Unit\BuildingPlacement2	
 	2391971545	PlayRainSounds			\Default Work Unit\PlayRainSounds	
+	2425052395	Tavern			\Default Work Unit\Tavern	
 	2879679237	SlimeSpawnSOund			\Default Work Unit\SlimeSpawnSOund	
 	3106958816	SlimeOnClick			\Default Work Unit\SlimeOnClick	
 	3161158948	SlimeHeadHit			\Default Work Unit\SlimeHeadHit	
@@ -18,6 +21,9 @@ Event	ID	Name			Wwise Object Path	Notes
 	3180268486	PlayTreeHit			\Default Work Unit\PlayTreeHit	
 	3504582140	PlayHatNoise			\Default Work Unit\PlayHatNoise	
 	4221916518	BuildingPlacement			\Default Work Unit\BuildingPlacement	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1908158473	PItch			\Default Work Unit\PItch	
 
 Effect plug-ins	ID	Name	Type				Notes
 	702943128	Stereo Delay (Custom)	Wwise Stereo Delay			
@@ -40,9 +46,12 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	395632469	FS10_86_02_Hard,BreakingWoo	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Mac\SFX\FS10_86_02_Hard,BreakingWoo_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\TreeHit\FS10_86_02_Hard,BreakingWoo		233568
 	407274218	Believe in the Slime_2	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Mac\SFX\Believe in the Slime_2_FBC78EF0.wem		\Interactive Music Hierarchy\Music\AmbientMusic\Believe in the Slime_2\Believe in the Slime_2		37227648
 	430201428	ESM_MG3_fx_science_fiction_alien_gibberish_09	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Mac\SFX\ESM_MG3_fx_science_fiction_alien_gibberish_09_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\ESM_MG3_fx_science_fiction_alien_gibberish_09		178380
+	430301153	ESM_Empire_Game_Settlement_Select_Entertainment_Tavern_Inn_Hotel_Bar_Pub	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Mac\SFX\ESM_Empire_Game_Settlement_Select_Entertainment_Tavern_Inn_Hotel_Bar_Pub_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\ESM_Empire_Game_Settlement_Select_Entertainment_Tavern_Inn_Hotel_Bar_Pub		631540
 	449511603	WoodHitSmall_FS10-94_04	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Mac\SFX\WoodHitSmall_FS10-94.04_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\WoodHitSmall_FS10-94_04		82016
 	475275108	Forest_S08AM_32	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Mac\SFX\Forest_S08AM.32_FBC78EF0.wem		\Interactive Music Hierarchy\Music\Ambience\Forest_S08AM_32\Forest_S08AM_32		28255328
+	526743540	OS_FIRE_Plop_Perc	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Mac\SFX\OS_FIRE_Plop_Perc_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\OS_FIRE_Plop_Perc		182380
 	574183791	FS10_76_06_SmallWoodBreak_W	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Mac\SFX\FS10_76_06_SmallWoodBreak_W_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\TreeHit\FS10_76_06_SmallWoodBreak_W		213088
+	585745606	PoliceSiren_SFXB_533	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Mac\SFX\PoliceSiren_SFXB.533_8BFA96D8.wem		\Actor-Mixer Hierarchy\Default Work Unit\PoliceSiren_SFXB_533		754652
 	722562023	BodyHitsImpacts-BodyIntoJos_02	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Mac\SFX\BodyHitsImpacts-BodyIntoJos_364C70C6.wem		\Actor-Mixer Hierarchy\Default Work Unit\BodyHitsImpacts-BodyIntoJos_02		259372
 	783206219	ESM_MG3_fx_science_fiction_alien_gibberish_05	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Mac\SFX\ESM_MG3_fx_science_fiction_alien_gibberish_05_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\SlimeOnClick\ESM_MG3_fx_science_fiction_alien_gibberish_05		338668
 	790378538	ESM_MG3_fx_science_fiction_alien_gibberish_03	H:\MonsterMobster\MonsterMobster_WwiseProject\.cache\Mac\SFX\ESM_MG3_fx_science_fiction_alien_gibberish_03_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\SlimeOnClick\ESM_MG3_fx_science_fiction_alien_gibberish_03		286380
